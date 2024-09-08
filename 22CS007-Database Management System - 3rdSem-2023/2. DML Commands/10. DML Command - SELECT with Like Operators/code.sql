@@ -1,0 +1,1 @@
+select * from student where studentName LIKE "%it";

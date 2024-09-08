@@ -1,0 +1,1 @@
+SELECT FirstName AS FName from Worker;

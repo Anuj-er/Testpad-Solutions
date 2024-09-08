@@ -1,0 +1,1 @@
+select * from Worker where FirstName LIKE "%t%";

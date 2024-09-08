@@ -1,0 +1,1 @@
+select * from Worker where FirstName == 'Amitabh' OR FirstName == 'Vivek';
