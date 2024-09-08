@@ -1,0 +1,70 @@
+1.)
+template<class T, class U>
+class A  {
+    T x;
+    U y;
+    static int count;
+};
+int main()  {
+   A<char, char> a;
+   A<int, int> b;
+   cout << sizeof(a) << endl;
+   cout << sizeof(b) << endl;
+   return 0;
+}
+
+Answer = 
+2
+8
+
+
+
+2.)
+template<class T, class U, class V=double>
+class A  {
+    T x;
+    U y;
+    V z;
+    static int count;
+};
+int main()
+{
+   A<int, int> a;
+   A<double, double> b;
+   cout << sizeof(a) << endl;
+   cout << sizeof(b) << endl;
+   return 0;
+}
+
+Answer = 
+16
+24
+
+
+
+3.)
+template <class T, int max>
+int arrMin(T arr[], int n)
+{
+   int m = max;
+   for (int i = 0; i < n; i++)
+      if (arr[i] < m)
+         m = arr[i];
+    return m;
+}
+int main()
+{
+   int arr1[]  = {11, 10, 5, 112, 23};
+   int n1 = sizeof(arr1)/sizeof(arr1[0]);
+   char arr2[] = {2, 3, 4, 6};
+   int n2 = sizeof(arr2)/sizeof(arr2[0]);
+   cout << arrMin<int, 10000>(arr1, n1) << endl;
+   cout << arrMin<char, 256>(arr2, n2);
+   return 0;
+}
+
+Answer = 
+5
+2
+
+

@@ -1,0 +1,70 @@
+1. var1->a();
+Answer:
+FB A
+
+2. var1->b();
+Answer:
+ERROR
+
+3. var1->c();
+Answer:
+FB C
+
+4. var2->a();
+Answer:
+FB A
+
+5. var2->b();
+Answer:
+ERROR
+
+6. var2->c();
+Answer:
+AM C
+FB C
+
+
+7. var3->a();
+Answer:
+FB A
+
+8. var3->b();
+Answer:
+ERROR
+
+9. var4->a();
+Answer:
+MS C
+G C
+G A
+
+10. ((Facebook*) var1)->a();
+Answer:
+FB A
+
+11. ((Facebook*) var1)->d();
+Answer:
+ERROR
+
+12. ((Amazon*) var2)->d();
+Answer:
+AM D
+AM C
+FB C
+
+13. ((Microsoft*) var3)->b();
+Answer:
+AM B
+FB A
+
+14. ((Facebook*) var4)->a();
+Answer:
+MS C
+G C
+G A
+
+15. ((Facebook*) var4)->b();
+Answer:
+ERROR
+
+

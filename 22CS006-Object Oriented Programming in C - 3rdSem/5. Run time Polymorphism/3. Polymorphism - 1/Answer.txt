@@ -1,0 +1,97 @@
+1.var1->a();
+
+Answer:
+J A
+
+2. var1->b();
+
+Answer:
+ERROR
+
+3. var1->c();
+
+Answer:
+J C
+K C
+
+4. var2->a();
+
+Answer:
+J A
+
+
+5. var2->b();
+
+Answer:
+ERROR
+
+6. var2->c();
+
+Answer:
+C C
+J C
+K C
+
+7. var3->a();
+
+Answer:
+K A
+E C
+
+8. var3->b();
+
+Answer:
+ERROR
+
+9. var4->a();
+
+Answer:
+J A
+
+10. var5->a();
+
+Answer:
+K A
+K C
+
+11. ((Jerry*) var1)->a();
+
+Answer:
+J A
+
+12. ((Jerry*) var1)->b();
+
+Answer:
+ERROR
+
+13. ((Chris*) var2)->d();
+
+Answer:
+C D
+C C
+J C
+K C
+
+14. ((Eddie*) var3)->b();
+
+Answer:
+K A
+E C
+E B
+
+15. ((Jerry*) var4)->a();
+
+Answer:
+J A
+
+16. ((Jerry*) var4)->b();
+
+Answer:
+ERROR
+
+17. ((Jerry*) var5)->b();
+
+Answer:
+ERROR
+
+

@@ -1,0 +1,61 @@
+1.)
+#include <iostream>
+using namespace std;
+void m1 (int i, int f)
+{
+    cout<<"m1-ii";
+}
+
+void m1(float f, int i)
+{
+    cout<<"m1-fi";
+}
+
+int main()
+{
+    m1(20,20);
+}
+
+
+Answer = m1-ii
+
+2.)
+#include <iostream>
+using namespace std;
+void m1 (int i, float f)
+{
+    cout<<"m1-if";
+}
+
+void m1(float f, int i)
+{
+    cout<<"m1-fi";
+}
+
+int main()
+{
+    m1(20,20);
+}
+
+Answer = Error
+
+3.)
+#include <iostream>
+using namespace std;
+void m1 (int i, float f)
+{
+    cout<<"m1-if";
+}
+
+void m1(float f, float i)
+{
+    cout<<"m1-ff";
+}
+
+int main()
+{
+    m1(20,20);
+}
+
+
+Answer = m1-if

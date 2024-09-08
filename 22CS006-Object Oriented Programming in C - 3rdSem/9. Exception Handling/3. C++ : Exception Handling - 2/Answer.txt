@@ -1,0 +1,102 @@
+1.)
+int main()
+{
+   int x = -1;
+   try {
+      cout << "Inside try \n";
+      if (x < 0)
+      {
+         throw x;
+         cout << "After throw \n";
+      }
+   }
+   catch (int x ) {
+      cout << "Exception Caught \n";
+   }
+   cout << "After catch \n";
+   return 0;
+}
+
+Answer = 
+Inside try 
+Exception Caught 
+After catch 
+
+
+
+2.)
+int main()
+{
+   int x = 1;
+   try {
+      cout << "Inside try \n";
+      if (x < 0)
+      {
+         throw x;
+         cout << "After throw \n";
+      }
+   }
+   catch (int x ) {
+      cout << "Exception Caught \n";
+   }
+   cout << "After catch \n";
+   return 0;
+}
+
+Answer = 
+Inside try 
+After catch
+
+
+
+3.)
+int main()
+{
+   int x = -1;
+   try {
+      cout << "Inside try \n";
+      if (x < 0)
+      {
+         cout << "Before throw \n";
+         throw x;
+      }
+   }
+   catch (int x ) {
+      cout << "Exception Caught \n";
+   }
+ 
+   cout << "After catch \n";
+   return 0;
+}
+
+Answer = 
+Inside try 
+Before throw 
+Exception Caught 
+After catch
+
+
+
+4.)
+int main()
+{
+   int x = 1;
+   try {
+      cout << "Inside try \n";
+      if (x < 0)
+      {
+         cout << "Before throw \n";
+         throw x;
+      }
+   }
+   catch (int x ) {
+      cout << "Exception Caught \n";
+   }
+ 
+   cout << "After catch \n";
+   return 0;
+}
+
+Answer = 
+Inside try 
+After catch 

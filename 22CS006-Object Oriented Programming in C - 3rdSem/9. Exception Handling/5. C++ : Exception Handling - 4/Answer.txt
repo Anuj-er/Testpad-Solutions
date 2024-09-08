@@ -1,0 +1,50 @@
+1.)
+int main()
+{
+    try
+    {
+       throw 'a';
+    }
+    catch (int param)
+    {
+        cout << "CQ int \n";
+    }
+    catch (...)
+    {
+        cout << "CQ default \n";
+    }
+    cout << "CQ After Exception";
+    return 0;
+}
+
+Answer = 
+CQ default 
+CQ After Exception
+
+
+
+
+2.)
+int main()
+{
+    try
+    {
+       throw 'a';
+    }
+    catch (char param)
+    {
+        cout << "CQ char \n";
+    }
+    catch (...)
+    {
+        cout << "CQ default \n";
+    }
+    cout << "CQ After Exception";
+    return 0;
+}
+
+Answer = 
+CQ char 
+CQ After Exception
+
+

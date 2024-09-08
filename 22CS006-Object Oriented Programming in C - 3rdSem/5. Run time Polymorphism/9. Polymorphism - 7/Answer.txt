@@ -1,0 +1,59 @@
+1. var1->m1();
+Answer:
+Cecil m1
+Kain m1
+
+2. var1->m2();
+Answer:
+Cecil m1
+Kain m1
+Kain m2
+
+3. var1->m3();
+Answer:
+ERROR
+
+4. var2->m3();
+Answer:
+Rosa m3
+Cecil m1
+Kain m1
+Kain m2
+
+5. var3->m2();
+Answer:
+Golbez m2
+Cecil m1
+Kain m1
+
+6. var3->m4():
+Answer:
+ERROR
+
+7. var4->m3();
+Answer:
+Cecil m3
+Golbez m2
+Cecil m1
+Kain m1
+
+8. ((Cecil*) var1)->m3();
+Answer:
+Cecil m3
+Cecil m1
+Kain m1
+Kain m2
+
+9. ((Rosa*) var1)->m4();
+Answer:
+CRASH
+
+10. ((Rosa*) var2)->m4();
+Answer:
+Rosa m4
+
+11. ((Golbez*) var3)->m4();
+Answer:
+ERROR
+
+

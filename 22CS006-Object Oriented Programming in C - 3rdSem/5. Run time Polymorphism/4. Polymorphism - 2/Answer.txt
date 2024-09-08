@@ -1,0 +1,75 @@
+1. var1->two();
+Answer:
+ERROR
+
+2. var1->two();
+Answer:
+C 2
+M 2
+
+
+3. var1->three();
+Answer:
+ERROR
+
+4. var2->one();
+Answer:
+A 1
+M 2
+
+5. var2->two();
+Answer:
+M 2
+
+6. var3->one();
+Answer:
+ERROR
+
+7. var3->two();
+Answer:
+V 2
+
+8. var4->one();
+Answer:
+A 1
+C 2
+M 2
+
+9. var4->three();
+Answer:
+C 3
+
+10. ((Animal*) var1)->one();
+Answer:
+A 1
+C 2
+M 2
+
+11. ((Mineral*) var1)->two();
+Answer:
+C 2
+M 2
+
+12. ((Computer*) var1)->three();
+Answer:
+C 3
+
+13. ((Vegetable*) var2)->three();
+Answer:
+ERROR
+
+14. ((Animal*) var2)->one();
+Answer:
+A 1
+M 2
+
+15. ((Computer*) var4)->two();
+Answer:
+C 2
+M 2
+
+16. ((Computer*) var4)->three();
+Answer:
+C 3
+
+

@@ -1,0 +1,55 @@
+1.)
+class base
+{
+int val1, val2;
+public:
+int get()
+{
+    val1 = 100;
+    val2 = 300;
+}
+friend float mean(base ob);
+};
+
+float mean(base ob)
+{
+return float(ob.val1 + ob.val2) / 2;
+}
+
+int main()
+{
+base obj;
+obj.get();
+cout << mean(obj);
+return 0;
+}
+
+Answer = Yes
+
+2.)
+class base
+{
+int val1, val2;
+public:
+int get()
+{
+    val1 = 100;
+    val2 = 300;
+}
+float mean(base ob);
+};
+
+float mean(base ob)
+{
+return float(ob.val1 + ob.val2) / 2;
+}
+
+int main()
+{
+base obj;
+obj.get();
+cout << mean(obj);
+return 0;
+}
+
+Answer = No

@@ -1,0 +1,43 @@
+1.)
+class CQ {
+public:
+   CQ() { cout << "CQ New" << endl; }
+  ~CQ() { cout << "CQ Delete"  << endl; }
+};
+ 
+int main() {
+  try {
+    CQ t1;
+    throw 10;
+  } catch(int i) {
+    cout << "Caught " << i << endl;
+  }
+}
+
+Answer = 
+CQ New
+CQ Delete
+Caught 10
+
+
+
+2.)
+class CQ {
+public:
+   CQ() { cout << "CQ New" << endl; }
+  ~CQ() { cout << "CQ Delete"  << endl; }
+};
+ 
+int main() {
+  CQ t1;
+  try {
+    throw 10;
+  } catch(int i) {
+    cout << "Caught " << i << endl;
+  }
+}
+
+Answer = 
+CQ New
+Caught 10
+CQ Delete

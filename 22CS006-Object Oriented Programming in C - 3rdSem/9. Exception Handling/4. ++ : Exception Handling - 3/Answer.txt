@@ -1,0 +1,86 @@
+1.)
+class Base {};
+class Derived: public Base {};
+int main()
+{
+   Derived d;
+   try {
+       throw d;
+   }
+   catch(Base b) {
+        cout<<"CQ Base";
+   }
+   catch(Derived d) {
+        cout<<"CQ Derived";
+   }
+   return 0;
+}
+
+Answer = CQ Base
+
+
+
+2.)
+class Base {};
+class Derived: public Base {};
+int main()
+{
+   Derived d;
+   try {
+       throw d;
+   }
+   catch(Derived d) {
+        cout<<"CQ Derived";
+   }
+   catch(Base b) {
+        cout<<"CQ Base";
+   }
+   return 0;
+}
+
+Answer = CQ Derived
+
+
+
+
+3.)
+class Base {};
+class Derived: public Base {};
+int main()
+{
+   Base b;
+   try {
+       throw b;
+   }
+   catch(Derived d) {
+        cout<<"CQ Derived";
+   }
+   catch(Base b) {
+        cout<<"CQ Base";
+   }
+   return 0;
+}
+
+Answer = CQ Base
+
+
+
+4.)
+class Base {};
+class Derived: public Base {};
+int main()
+{
+   Base b;
+   try {
+       throw b;
+   }
+   catch(Base b) {
+        cout<<"CQ Base";
+   }
+   catch(Derived d) {
+        cout<<"CQ Derived";
+   }
+   return 0;
+}
+
+Answer =  CQ Base

@@ -1,0 +1,90 @@
+1. var1->m1();
+Answer:
+L 1
+L 2
+B 1
+
+2. var1->m2();
+Answer:
+L 2
+
+3. var1->m3();
+Answer:
+ERROR
+
+4. var2->m1();
+Answer:
+L 1
+H 2
+L 2
+B 1
+
+5. var2->m2();
+Answer:
+H 2
+L 2
+
+6. var2->m3();
+Answer:
+M 3
+L 1
+H 2
+L 2
+B 1
+
+7. var2->m4();
+Answer:
+ERROR
+
+8. var3->m1();
+Answer:
+L 1
+H 2
+L 2
+B 1
+
+9. var3->m2();
+Answer:
+H 2
+L 2
+
+10. var4->m2();
+Answer:
+H 2
+L 2
+
+11. var4->m3();
+Answer:
+B 3
+
+12. var4->m4();
+Answer:
+ERROR
+
+13. ((Bart*) var1)->m1();
+Answer:
+L 1
+L 2
+B 1
+
+14. ((Bart*) var1)->m3();
+Answer:
+B 3
+
+15. ((Marge*) var5)->m3();
+Answer:
+CRASH
+
+16. ((Lisa*) var4)->m3();
+Answer:
+ERROR
+
+17. ((Homer*) var2)->m4();
+Answer:
+M 4
+
+18. ((Marge*) var2)->m4();
+Answer:
+M 4
+
+

@@ -1,0 +1,68 @@
+1.)
+#include <iostream>
+using namespace std;
+int x, y;
+void add(int a) 
+{
+    x =  a + 1;
+}
+
+void add(int a, int b)
+{
+    x =  a + 2;
+}        
+
+int main()
+{
+    int a = 0;
+    add(6);
+    cout<<x;     
+}
+
+Answer = 7
+
+2.)
+#include <iostream>
+using namespace std;
+int x, y;
+void add(int a) 
+{
+    x =  a + 1;
+}
+
+void add(int a, int b)
+{
+    x =  a + 2;
+}        
+
+int main()
+{
+    int a = 0;
+    add(6, 6);
+    cout<<x;     
+}
+
+Answer = 8
+
+3.)
+#include <iostream>
+using namespace std;
+int x, y;
+void add(double a) 
+{
+    x =  a + 1;
+}
+
+void add(int a, int b)
+{
+    x =  a + 2;
+}        
+
+int main()
+{
+    int a = 0;
+    add(6.6);
+    cout<<x;     
+}
+
+Answer = 7

@@ -1,0 +1,91 @@
+1. var2->m1();
+Answer:
+T 1
+T 2
+V 1
+
+
+2. var2->m2();
+Answer:
+T 2
+
+3. var2->m3();
+Answer:
+ERROR
+
+4. var1->m1();
+Answer:
+T 1
+M 2
+T 2
+V 1
+
+5. var1->m2();
+Answer:
+M 2
+T 2
+
+6. var1->m3();
+Answer:
+G 3
+T 1
+M 2
+T 2
+V 1
+
+7. var1->m4();
+Answer:
+ERROR
+
+8. var4->m1();
+Answer:
+T 1
+M 2
+T 2
+V 1
+
+9. var4->m2();
+Answer:
+M 2
+T 2
+
+10. var3->m2();
+Answer:
+M 2
+T 2
+
+11. var3->m3();
+Answer:
+V 3
+
+12. var5->m4();
+Answer:
+ERROR
+
+13. ((Vernal*) var2)->m1();
+Answer:
+T 1
+T 2
+V 1
+
+14. ((Vernal*) var2)->m3();
+Answer:
+V 3
+
+15. ((Glacier*) var5)->m3();
+Answer:
+CRASH
+
+16. ((Tuolumne*) var3)->m3();
+Answer:
+ERROR
+
+17. ((Muir*) var1)->m4();
+Answer:
+G 4
+
+18. ((Glacier*) var1)->m4();
+Answer:
+G 4
+
+

@@ -1,0 +1,16 @@
+Answer 1:
+constructor for id 1
+constructor for id 1
+constructor for id 1
+destructor for id 1
+destructor for id 1
+destructor for id 1
+
+Answer 2:
+constructor for id 1
+constructor for id 2
+constructor for id 3
+destructor for id 3
+destructor for id 2
+destructor for id 1
+
