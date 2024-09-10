@@ -1,0 +1,1 @@
+SELECT * FROM students AS stu WHERE stud_marks == (SELECT MAX(stud_marks) FROM students WHERE stud_dept=stu.stud_dept);

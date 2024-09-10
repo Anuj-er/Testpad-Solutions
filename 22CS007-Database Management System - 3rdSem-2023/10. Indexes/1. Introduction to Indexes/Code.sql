@@ -1,0 +1,1 @@
+CREATE INDEX stud_index ON students(roll_no);

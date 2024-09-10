@@ -1,0 +1,1 @@
+SELECT * FROM students AS stu WHERE stud_age == (SELECT MAX(stud_age) FROM students WHERE stud_dept = stu.stud_dept);

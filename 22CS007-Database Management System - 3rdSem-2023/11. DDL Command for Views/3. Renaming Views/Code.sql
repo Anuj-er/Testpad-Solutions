@@ -1,0 +1,1 @@
+RENAME TABLE stud_view TO student_view;
