@@ -1,0 +1,1 @@
+SELECT stud_dept, COUNT(roll_no) from students GROUP BY stud_dept;

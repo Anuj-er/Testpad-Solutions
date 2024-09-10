@@ -1,0 +1,1 @@
+SELECT * FROM students INNER JOIN stud_marks ON students.roll_no = stud_marks.stud_roll WHERE marks > 75;

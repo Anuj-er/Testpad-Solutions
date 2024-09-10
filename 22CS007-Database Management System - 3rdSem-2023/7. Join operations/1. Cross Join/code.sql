@@ -1,0 +1,1 @@
+SELECT * FROM students CROSS JOIN stud_marks;

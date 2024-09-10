@@ -1,0 +1,1 @@
+SELECT * from Students ORDER BY stud_name ASC;

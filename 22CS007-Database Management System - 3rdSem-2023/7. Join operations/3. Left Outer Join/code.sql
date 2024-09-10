@@ -1,0 +1,1 @@
+SELECT * FROM students LEFT OUTER JOIN stud_marks ON students.roll_no = stud_marks.stud_roll;

@@ -1,0 +1,1 @@
+SELECT SUBSTR(FirstName, 1, 3) FROM Worker;

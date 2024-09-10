@@ -1,0 +1,1 @@
+select distinct(length(department)) from worker;

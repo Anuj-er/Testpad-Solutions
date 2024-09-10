@@ -1,0 +1,1 @@
+SELECT REPLACE(FIRSTNAME, 'a', 'l') FROM Worker;

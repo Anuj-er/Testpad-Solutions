@@ -1,0 +1,1 @@
+SELECT MAX(stud_marks), MIN(stud_marks) FROM Students;

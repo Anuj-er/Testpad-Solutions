@@ -1,0 +1,1 @@
+SELECT * FROM students NATURAL JOIN stud_marks WHERE marks >= 45;
