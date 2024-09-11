@@ -1,0 +1,2 @@
+undefined says, 'Hi!'
+CQ says, 'Hi!'

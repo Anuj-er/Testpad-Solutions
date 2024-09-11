@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    p {
+      font-size: 10px;
+    }
+
+    .task-list {
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      background-color: antiquewhite;
+      width: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-right: 20px;
+    }
+
+    .task-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .checkbox {
+      background-color: transparent;
+    }
+
+    .task-list li .right-controls {
+      display: flex;
+      align-items: center;
+    }
+
+    .task-list li .checkbox {
+      margin-right: 5px;
+    }
+
+    .right-controls {
+      display: flex;
+      align-items: center;
+    }
+
+    .task-list h2 {
+      margin-top: 0;
+    }
+
+    .task-text {
+      font-size: 13px;
+      color: #333;
+    }
+
+    .task-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .task-list li input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .task-list li .delete-task {
+      float: right;
+      cursor: pointer;
+    }
+
+    .task-form {
+      width: 300px;
+    }
+
+    .task-form h2 {
+      margin-top: 0;
+    }
+
+    .task-form input[type="text"] {
+      font-size: 26px;
+      border: none;
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    .task-form input[type="text"]:focus {
+      outline: none;
+    }
+
+    hr {
+      color: #333;
+    }
+
+    .edit-task {
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    .task-text.completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="task-list">
+      <h2>TASK LIST</h2>
+      <p>Add tasks to your list by typing to the right and pressing enter. You may then view pending tasks below.</p>
+      <ul id="taskList">
+        <li>
+          <span class="task-text">First Task</span>
+          <div class="right-controls">
+            <input class="checkbox" type="checkbox" />
+            <span class="edit-task">✎</span>
+            <span class="delete-task">x</span>
+          </div>
+        </li>
+        <hr />
+        <li>
+          <span class="task-text">Second Task</span>
+          <div class="right-controls">
+            <input class="checkbox" type="checkbox" />
+            <span class="edit-task">✎</span>
+            <span class="delete-task">x</span>
+          </div>
+        </li>
+        <hr />
+        <li>
+          <span class="task-text">Third Task</span>
+          <div class="right-controls">
+            <input class="checkbox" type="checkbox" />
+            <span class="edit-task">✎</span>
+            <span class="delete-task">x</span>
+          </div>
+        </li>
+        <hr />
+      </ul>
+    </div>
+
+    <div class="task-form">
+      <input type="text" id="taskInput" placeholder="I need to..." />
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+      const taskList = document.getElementById("taskList");
+      const taskInput = document.getElementById("taskInput");
+
+      let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+      if (tasks.length === 0) {
+        tasks = [
+          { text: "First Task", completed: false },
+          { text: "Second Task", completed: false },
+          { text: "Third Task", completed: false },
+        ];
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+      }
+
+      renderTasks();
+
+      taskInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          addTask();
+        }
+      });
+
+      function addTask() {
+        const taskText = taskInput.value.trim();
+        if (taskText === "") return;
+
+        const newTask = {
+          text: taskText,
+          completed: false,
+        };
+
+        tasks.push(newTask);
+
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        renderTasks();
+        taskInput.value = "";
+      }
+
+      function renderTasks() {
+        taskList.innerHTML = "";
+
+        tasks.forEach((task, index) => {
+          const listItem = document.createElement("li");
+          listItem.innerHTML = `
+            <span class="task-text ${task.completed ? "completed" : ""}">${task.text}</span>
+            <div class="right-controls">
+              <input class="checkbox" type="checkbox" ${task.completed ? "checked" : ""}>
+              <span class="edit-task">✎</span>
+              <span class="delete-task">x</span>
+            </div>
+          `;
+
+          taskList.appendChild(listItem);
+
+          const checkbox = listItem.querySelector(".checkbox");
+          checkbox.addEventListener("change", () => {
+            toggleTaskCompletion(index);
+          });
+
+          const deleteTaskButton = listItem.querySelector(".delete-task");
+          deleteTaskButton.addEventListener("click", () => {
+            deleteTask(index);
+          });
+
+          const editTaskButton = listItem.querySelector(".edit-task");
+          editTaskButton.addEventListener("click", () => {
+            editTask(index, listItem);
+          });
+        });
+      }
+
+      function toggleTaskCompletion(index) {
+        tasks[index].completed = !tasks[index].completed;
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        renderTasks();
+      }
+
+      function deleteTask(index) {
+        tasks.splice(index, 1);
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        renderTasks();
+      }
+
+      function editTask(index, listItem) {
+        const taskTextSpan = listItem.querySelector(".task-text");
+        const originalTaskText = taskTextSpan.textContent;
+
+        const newTaskText = prompt("Edit task:", originalTaskText);
+        if (newTaskText !== null && newTaskText.trim() !== "") {
+          tasks[index].text = newTaskText.trim();
+          localStorage.setItem("tasks", JSON.stringify(tasks));
+          renderTasks();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

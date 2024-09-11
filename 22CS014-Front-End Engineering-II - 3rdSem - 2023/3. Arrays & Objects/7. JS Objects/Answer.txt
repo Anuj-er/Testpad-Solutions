@@ -1,0 +1,8 @@
+1.) How would you access the driver's name of rentalCar object?
+rentalCar.driverDetails.name;
+
+2.) How would you delete hourlyRate property from rentalCar object?
+delete rentalCar.hourlyRate;
+
+3.) How would you access the 2nd booking's customer name from rentalCar object?
+rentalCar.bookings[1].customer.name;
