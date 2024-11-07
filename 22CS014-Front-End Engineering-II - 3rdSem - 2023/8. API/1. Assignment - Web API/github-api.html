@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile</title>
+    <style>
+        :root {
+            --bg: #fcfcfc;
+            --card: #ffffff;
+            --text: #18181b;
+            --text-secondary: #71717a;
+            --accent: #2563eb;
+            --radius: 12px;
+            --shadow: 0 2px 8px rgb(0 0 0 / 4%);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #18181b;
+                --card: #27272a;
+                --text: #fafafa;
+                --text-secondary: #a1a1aa;
+                --accent: #60a5fa;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 32px 24px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .search-container {
+            background: var(--card);
+            padding: 24px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .search-form {
+            display: flex;
+            gap: 8px;
+        }
+
+        input {
+            flex: 1;
+            padding: 12px 16px;
+            font-size: 15px;
+            border: 1px solid #e4e4e7;
+            background: var(--bg);
+            color: var(--text);
+            border-radius: var(--radius);
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        button {
+            padding: 12px 24px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .profile {
+            background: var(--card);
+            padding: 32px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .profile-header {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-info h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .profile-info p {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 16px;
+            background: var(--bg);
+            border-radius: var(--radius);
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .repos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 16px;
+        }
+
+        .repo-link {
+            padding: 16px;
+            background: var(--bg);
+            color: var(--text);
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-size: 14px;
+            transition: transform 0.2s;
+        }
+
+        .repo-link:hover {
+            transform: translateY(-2px);
+            color: var(--accent);
+        }
+
+        .error {
+            text-align: center;
+            color: var(--text-secondary);
+            padding: 32px;
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <h1>GitHub Profile Search</h1>
+            <form id="githubForm" class="search-form">
+                <input type="text" id="username" placeholder="Enter username" required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div id="userInfo"></div>
+    </div>
+
+    <script>
+        document.getElementById('githubForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            
+            document.getElementById('userInfo').innerHTML = '';
+
+            fetch(`https://api.github.com/users/${username}`)
+                .then(response => {
+                    if (!response.ok) throw new Error('User not found');
+                    return response.json();
+                })
+                .then(userData => {
+                    const userInfo = document.getElementById('userInfo');
+                    userInfo.innerHTML = `
+                        <div class="profile">
+                            <div class="profile-header">
+                                <img class="avatar" src="${userData.avatar_url}" alt="Profile">
+                                <div class="profile-info">
+                                    <h2>${userData.name || username}</h2>
+                                    <p>@${userData.login}</p>
+                                </div>
+                            </div>
+                            <div class="stats">
+                                <div class="stat">
+                                    <div class="stat-value">${userData.public_repos}</div>
+                                    <div class="stat-label">Repositories</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">${userData.followers}</div>
+                                    <div class="stat-label">Followers</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">${userData.following}</div>
+                                    <div class="stat-label">Following</div>
+                                </div>
+                            </div>
+                            <div class="repos-grid"></div>
+                        </div>
+                    `;
+                    return fetch(`https://api.github.com/users/${username}/repos`);
+                })
+                .then(response => response.json())
+                .then(repos => {
+                    const reposGrid = document.querySelector('.repos-grid');
+                    repos.forEach(repo => {
+                        const repoLink = document.createElement('a');
+                        repoLink.href = repo.html_url;
+                        repoLink.target = '_blank';
+                        repoLink.className = 'repo-link';
+                        repoLink.textContent = repo.name;
+                        reposGrid.appendChild(repoLink);
+                    });
+                })
+                .catch(error => {
+                    document.getElementById('userInfo').innerHTML = `
+                        <div class="error">
+                            User not found. Please check the username and try again.
+                        </div>
+                    `;
+                });
+        });
+    </script>
+</body>
+</html>

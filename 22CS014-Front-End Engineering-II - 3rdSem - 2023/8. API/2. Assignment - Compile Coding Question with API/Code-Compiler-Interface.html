@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Compiler Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        #editor-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #code-editor {
+            width: 100%;
+            height: 300px;
+            font-family: monospace;
+            font-size: 14px;
+            resize: vertical;
+        }
+        #language-select {
+            align-self: flex-end;
+        }
+        #output-console {
+            width: 100%;
+            height: 150px;
+            background-color: #272626;
+            color: #61dafb;
+            font-family: monospace;
+            font-size: 14px;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        #compile-btn {
+            background-color: #ffc107;
+            border: none;
+            color: #000;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Type Your Code</h1>
+    <div id="editor-container">
+        <textarea id="code-editor" placeholder="#Write your code"></textarea>
+        <select id="language-select">
+            <option value="0">Python</option>
+            <option value="4">JavaScript</option>
+            <option value="7">C</option>
+            <option value="77">C++</option>
+            <option value="8">Java</option>
+        </select>
+        <div id="output-console">OUTPUT:</div>
+        <button id="compile-btn">Compile</button>
+    </div>
+
+    <script>
+        const codeEditor = document.getElementById('code-editor');
+        const languageSelect = document.getElementById('language-select');
+        const outputConsole = document.getElementById('output-console');
+        const compileBtn = document.getElementById('compile-btn');
+
+        compileBtn.addEventListener('click', () => {
+            const code = codeEditor.value;
+            const langId = languageSelect.value;
+
+            // Send code to server
+            fetch('https://codequotient.com/api/executeCode', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ code, langId }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    outputConsole.textContent = `Error: ${data.error}`;
+                } else {
+                    const codeId = data.codeId;
+                    checkResult(codeId);
+                }
+            })
+            .catch(error => {
+                outputConsole.textContent = `Error: ${error.message}`;
+            });
+        });
+
+        function checkResult(codeId) {
+            const intervalId = setInterval(() => {
+                fetch(`https://codequotient.com/api/codeResult/${codeId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data?.data?.output || data?.data?.errors) {
+                            clearInterval(intervalId);
+                            if (data.data.output) {
+                                outputConsole.textContent = `Output: ${data.data.output}`;
+                            } else {
+                                outputConsole.textContent = `Error: ${data.data.errors}`;
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        clearInterval(intervalId);
+                        outputConsole.textContent = `Error: ${error.message}`;
+                    });
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

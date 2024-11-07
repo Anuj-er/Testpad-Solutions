@@ -1,0 +1,1 @@
+const JSXElement = (<h1 className="heading-1">Hello CodeQuotient!</h1>);

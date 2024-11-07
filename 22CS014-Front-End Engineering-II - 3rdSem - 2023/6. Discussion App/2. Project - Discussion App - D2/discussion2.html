@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #0b1e9a;
+            color: white;
+            padding: 1rem;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+        }
+
+        #left-pane {
+            width: 33%;
+            border-right: 1px solid #ccc;
+            padding: 1rem;
+        }
+
+        #right-pane {
+            width: 67%;
+            padding: 1rem;
+        }
+
+        .controls {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+
+        #new-question-btn {
+            background-color: #3B82F6;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            margin-right: 0.5rem;
+        }
+
+        #search-input {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+        }
+
+        .question-item {
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+        }
+
+        .question-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+        }
+
+        form textarea {
+            height: 100px;
+        }
+
+        form button {
+            background-color: #3B82F6;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+
+        #resolve-btn {
+            background-color: #3B82F6;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            float: right;
+            margin-bottom: 1rem;
+        }
+
+        #question-content {
+            background-color: #f0f0f0;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .response {
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .response-name {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Discussion Portal</h1>
+    </header>
+    <main>
+        <div id="left-pane">
+            <div class="controls">
+                <button id="new-question-btn">New Question form</button>
+                <input type="text" id="search-input" placeholder="search questions...">
+            </div>
+            <div id="question-list"></div>
+        </div>
+        <div id="right-pane">
+            <div id="welcome-section">
+                <h2>Welcome to Anuj's Discussion Portal !</h2>
+                <p>Enter a subject and question to get started</p>
+                <form id="question-form">
+                    <input type="text" id="subject-input" placeholder="Subject" required>
+                    <textarea id="question-input" placeholder="Question" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div id="question-detail" style="display: none;">
+                <h2>Question</h2>
+                <div id="question-content"></div>
+                <button id="resolve-btn">Resolve</button>
+                <h3>Response</h3>
+                <div id="responses"></div>
+                <h3>Add Response</h3>
+                <form id="response-form">
+                    <input type="text" id="name-input" placeholder="Enter Name" required>
+                    <textarea id="comment-input" placeholder="Enter Comment" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script>
+        let questions = [];
+        let selectedQuestion = null;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const newQuestionBtn = document.getElementById('new-question-btn');
+            const searchInput = document.getElementById('search-input');
+            const questionForm = document.getElementById('question-form');
+            const responseForm = document.getElementById('response-form');
+            const resolveBtn = document.getElementById('resolve-btn');
+
+            newQuestionBtn.addEventListener('click', showQuestionForm);
+            searchInput.addEventListener('input', handleSearch);
+            questionForm.addEventListener('submit', handleQuestionSubmit);
+            responseForm.addEventListener('submit', handleResponseSubmit);
+            resolveBtn.addEventListener('click', handleResolve);
+
+            renderQuestionList();
+        });
+
+        function showQuestionForm() {
+            document.getElementById('welcome-section').style.display = 'block';
+            document.getElementById('question-detail').style.display = 'none';
+        }
+
+        function handleSearch(e) {
+            const searchQuery = e.target.value.toLowerCase();
+            const filteredQuestions = questions.filter(q =>
+                q.subject.toLowerCase().includes(searchQuery) ||
+                q.text.toLowerCase().includes(searchQuery)
+            );
+            renderQuestionList(filteredQuestions);
+        }
+
+        function handleQuestionSubmit(e) {
+            e.preventDefault();
+            const subject = document.getElementById('subject-input').value;
+            const text = document.getElementById('question-input').value;
+            if (subject && text) {
+                const newQuestion = { id: Date.now(), subject, text, responses: [] };
+                questions.push(newQuestion);
+                renderQuestionList();
+                e.target.reset();
+            }
+        }
+
+        function handleResponseSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('name-input').value;
+            const comment = document.getElementById('comment-input').value;
+            if (name && comment && selectedQuestion) {
+                selectedQuestion.responses.push({ name, comment });
+                renderQuestionDetail(selectedQuestion);
+                e.target.reset();
+            }
+        }
+
+        function handleResolve() {
+            if (selectedQuestion) {
+                questions = questions.filter(q => q.id !== selectedQuestion.id);
+                renderQuestionList();
+                showQuestionForm();
+            }
+        }
+
+        function renderQuestionList(filteredQuestions = questions) {
+            const questionList = document.getElementById('question-list');
+            questionList.innerHTML = '';
+            filteredQuestions.forEach(q => {
+                const questionEl = document.createElement('div');
+                questionEl.className = 'question-item';
+                questionEl.innerHTML = `<strong>${q.subject}</strong><br>${q.text}`;
+                questionEl.addEventListener('click', () => renderQuestionDetail(q));
+                questionList.appendChild(questionEl);
+            });
+        }
+
+        function renderQuestionDetail(question) {
+            selectedQuestion = question;
+            document.getElementById('welcome-section').style.display = 'none';
+            document.getElementById('question-detail').style.display = 'block';
+
+            const questionContent = document.getElementById('question-content');
+            questionContent.innerHTML = `<strong>${question.subject}</strong><br>${question.text}`;
+
+            const responses = document.getElementById('responses');
+            responses.innerHTML = '';
+            question.responses.forEach(r => {
+                const responseEl = document.createElement('div');
+                responseEl.className = 'response';
+                responseEl.innerHTML = `<div class="response-name">${r.name}</div>${r.comment}`;
+                responses.appendChild(responseEl);
+            });
+        }
+    </script>
+</body>
+
+</html>

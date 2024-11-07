@@ -1,0 +1,1 @@
+const JSXElement = React.createElement('h3', null, 'Hello CodeQuotient!');
