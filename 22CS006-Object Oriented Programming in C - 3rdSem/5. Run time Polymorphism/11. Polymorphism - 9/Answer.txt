@@ -1,0 +1,61 @@
+1.) var1->m1();
+Ans:
+Frosty m1
+
+
+2.) var1->m2();
+Ans:
+ERROR
+
+
+3.) var1->m3();
+Ans:
+Frosty m3
+
+4.) var2->m1();
+Ans:
+Frosty m1
+
+
+5.) var2->m2();
+Ans:
+ERROR
+
+
+6.) var2->m3();
+Ans:
+Grinch m3   Frosty m3
+
+
+7.) var3->m2();
+Ans:
+ERROR
+
+
+8.) var4->m1();
+Ans:
+Rudolph m3   Santa m3   Santa m1
+
+
+9.) ((Frosty*) var1)->m1();
+Ans:
+Frosty m1
+
+10.) ((Frosty*) var1)->m4();
+Ans:
+ERROR
+
+
+11.) ((Grinch*) var1)->m4();
+Ans:
+CRASH
+
+
+12.) ((Grinch*) var2)->m4();
+Ans:
+Grinch m4   Grinch m3   Frosty m3
+
+
+13.) ((Rudolph*) var3)->m2();
+Ans:
+The last test case is not working. If you have a solution, please feel free to create a pull request.
