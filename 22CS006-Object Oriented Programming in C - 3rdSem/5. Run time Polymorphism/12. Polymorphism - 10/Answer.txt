@@ -1,0 +1,39 @@
+1.) var1->m1();
+Ans:
+Ca1  Tu2  Ca2
+
+2.) var1->m3();
+Ans:
+ERROR
+
+3.) var2->m2();
+Ans:
+Tu2  Ca2
+
+4.) var2->m3();
+Ans:
+Tu3  Js1  Ca1  Tu2  Ca2 
+
+5.) var2->m4();
+Ans:
+ERROR
+
+6.) ((Tulip*) var1)->m3();
+Ans:
+Tu3  Ca1  Tu2  Ca2 
+
+7.) ((Tulip*) var1)->m4();
+Ans:
+ERROR
+
+8.) ((Jesse*) var1)->m4();
+Ans:
+CRASH
+
+9.) ((Cassidy*) var2)->m3();
+Ans:
+ERROR
+
+10.) ((Jesse*) var2)->m4();
+Ans:
+Js4  Tu2  Ca2
