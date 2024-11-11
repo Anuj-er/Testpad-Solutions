@@ -58,4 +58,4 @@ Grinch m4   Grinch m3   Frosty m3
 
 13.) ((Rudolph*) var3)->m2();
 Ans:
-The last test case is not working. If you have a solution, please feel free to create a pull request.
+Grinch m2   Frosty m1   
