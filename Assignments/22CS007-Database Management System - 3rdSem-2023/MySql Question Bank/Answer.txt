@@ -1,0 +1,157 @@
+1) SELECT * FROM emp;
+
+
+
+2) SELECT * FROM emp WHERE deptno = 10;
+
+
+
+3) SELECT * FROM emp WHERE deptno != 30;
+
+
+
+4) SELECT COUNT(*) FROM emp;
+
+
+
+5) SELECT * FROM emp ORDER BY salary DESC;
+
+
+
+6) SELECT * FROM emp LIMIT 5;
+
+
+
+7) SELECT * FROM emp ORDER BY deptno ASC, salary DESC;
+
+
+
+8) SELECT * FROM emp WHERE YEAR(hiredate) = 1981;
+
+
+
+9) SELECT COALESCE(COMM, 0) AS COMM FROM emp;
+
+
+
+10) SELECT * FROM emp WHERE MGR IN (7698, 7566) AND sal > 1500;
+
+
+
+11) SELECT * FROM emp WHERE hiredate < '1981-01-01';
+
+
+
+12) SELECT *, YEAR(CURDATE()) - YEAR(hiredate) AS years_of_service FROM emp;
+
+
+
+13) SELECT * FROM emp WHERE YEAR(hiredate) != 1981;
+
+
+
+14) SELECT * FROM emp WHERE MONTH(hiredate) IN (7, 8, 9);
+
+
+
+15) SELECT * FROM emp WHERE sal < (SELECT sal FROM emp WHERE ename = 'Ford');
+
+
+
+16) SELECT *, ROWID FROM emp; -- Note: ROWID is not standard in MySQL, consider using a unique identifier instead.
+
+
+
+17) SELECT * FROM emp WHERE hiredate < (SELECT hiredate FROM emp WHERE ename = 'SCOTT');
+
+
+
+18) SELECT * FROM emp WHERE YEAR(hiredate) = 1981 AND MONTH(hiredate) IN (7, 8, 9);
+
+
+
+19) SELECT DATE_ADD(hiredate, INTERVAL 3 MONTH) AS new_hiredate FROM emp;
+
+
+
+20) SELECT DATE_ADD(hiredate, INTERVAL (9 - DAYOFWEEK(hiredate)) % 7 + 1 DAY) AS next_tuesday FROM emp;
+
+
+
+21) SELECT DATE_ADD(CURDATE(), INTERVAL 15 DAY) AS future_date;
+
+
+
+22) SELECT CURDATE() AS current_date;
+
+
+
+23) SELECT DISTINCT job FROM emp;
+
+
+
+24) SELECT * FROM emp WHERE hiredate > '1981-09-28' AND hiredate < '1981-12-03';
+
+
+
+25) SELECT CONCAT(UPPER(LEFT(ename, 1)), LOWER(SUBSTRING(ename, 2))) AS formatted_name FROM emp WHERE ename LIKE 'J%' OR ename LIKE 'A%' OR ename LIKE 'M%';
+
+
+
+26) select e.job, d.location from emp e join dept d on e.deptno = d.deptno where e.deptno = 10;
+
+
+
+27) select e.ename, d.dname from emp e join dept d on e.deptno = d.deptno where e.comm is not null;
+
+
+
+28) select empno, ename, sal, sal * 1.15 as increased_salary from emp;
+
+
+
+29) select e.ename, e.sal, s.grade from emp e join salgrade s on e.sal between s.losal and s.hisal;
+
+
+
+30) select e1.ename as employee_name, e2.ename as manager_name from emp e1 left join emp e2 on e1.mgr = e2.empno;
+
+
+
+31) select deptno from emp group by deptno having avg(sal) < (select avg(sal) from emp where deptno = emp.deptno);
+
+
+
+32) select e1.* from emp e1 join emp e2 on e1.mgr = e2.empno where e1.sal > e2.sal;
+
+
+
+33) select * from emp where length(ename) = 5;
+
+
+
+34) select * from emp where ename like 'j%s';
+
+
+
+35) select * from emp where deptno not in (10, 20, 40);
+
+
+
+36) select * from emp where job not in ('president', 'manager');
+
+
+
+37) select max(sal) from emp;
+
+
+
+38) select avg(sal) from emp where job = 'salesman';
+
+
+
+39) select distinct sal from emp;
+
+
+
+40) select * from emp where comm is null;
