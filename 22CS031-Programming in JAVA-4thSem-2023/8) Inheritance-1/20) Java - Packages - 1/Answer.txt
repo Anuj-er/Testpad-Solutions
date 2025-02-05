@@ -1,0 +1,15 @@
+1.) Every class is part of some package.
+Answer:-
+T
+
+2.) If no package is specified, the classes in the file go into a special unnamed package
+Answer:-
+T
+
+3.) If no package is specified, a new package is created with folder name of class and the class is put in this package.
+Answer:-
+F
+
+4.) All classes in a file are part of the same package.
+Answer:-
+T

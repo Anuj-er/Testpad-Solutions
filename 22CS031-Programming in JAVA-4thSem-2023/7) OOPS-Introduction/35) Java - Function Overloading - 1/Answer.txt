@@ -1,0 +1,68 @@
+1.)
+class Main
+    {
+     public void m1 (int i, int f)
+     {
+      System.out.println("m1-ii");
+     }
+
+     public void m1(float f, int i)
+      {
+      System.out.println("m1-fi");
+      }
+
+      public static void main(String[] args)
+      {
+        Main s=new Main();
+        s.m1(20,20);
+      }
+    }
+
+Answer:-
+m1-ii
+
+2.)
+class Main
+    {
+     public void m1 (int i, float f)
+     {
+      System.out.println("m1-if");
+     }
+
+     public void m1(float f, int i)
+      {
+      System.out.println("m1-fi");
+      }
+
+      public static void main(String[] args)
+      {
+        Main s=new Main();
+        s.m1(20,20);
+      }
+    }
+
+Answer:-
+Error
+
+3.)
+class Main
+    {
+     public void m1 (int i, float f)
+     {
+      System.out.println("m1-if");
+     }
+
+     public void m1(float f, float i)
+      {
+      System.out.println("m1-ff");
+      }
+
+      public static void main(String[] args)
+      {
+        Main s=new Main();
+        s.m1(20,20);
+      }
+    }
+
+Answer:-
+m1-if

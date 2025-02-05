@@ -1,0 +1,11 @@
+1.) System.out.println(cq1);
+Answer:-
+[Code, Quotient, Gopal, Arun]
+
+2.) System.out.println(cq2);
+Answer:-
+[Code, Quotient, Gopal]
+
+3.) System.out.println(cq3);
+Answer:-
+[Code, Quotient, Gopal, Arun]

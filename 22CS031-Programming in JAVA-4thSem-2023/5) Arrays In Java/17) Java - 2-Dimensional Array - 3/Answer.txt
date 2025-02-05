@@ -1,0 +1,27 @@
+1.)
+int[][] arr = {{1,2,3}, {4,5}, {1,5,9}};
+for(int[] i:arr)
+{
+    for(int j:i)
+        System.out.print(j+" ");
+    System.out.println();
+}
+
+Answer:-
+1 2 3 
+4 5 
+1 5 9
+
+2.)
+int[][] arr = {{21,32}, {14,51}, {59}};
+for(int[] i:arr)
+{
+    for(int j:i)
+        System.out.print(j+" ");
+    System.out.println();
+}
+
+Answer:-
+21 32 
+14 51 
+59 

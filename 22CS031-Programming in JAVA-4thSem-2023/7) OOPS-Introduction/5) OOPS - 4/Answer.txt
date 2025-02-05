@@ -1,0 +1,15 @@
+1.) To create a new calculator and use it to solve a math problem
+Answer:-
+No
+
+2.) Methods to add, subtract, multiply, divide
+Answer:-
+Yes
+
+3.) Things you can do with the Calculator, such as lift it up, put it down, turn it on and off, put batteries in it
+Answer:-
+No
+
+4.) All of the buttons the calculator would have on it, like a + button, a * button, and a 7 button
+Answer:-
+No

@@ -1,0 +1,11 @@
+1.) Its name, who owns it, its age, its size, weight in pounds.
+Answer:-
+No
+
+2.) The model number and company that manufactures it
+Answer:-
+No
+
+3.) The number that has just been computed
+Answer:-
+Yes

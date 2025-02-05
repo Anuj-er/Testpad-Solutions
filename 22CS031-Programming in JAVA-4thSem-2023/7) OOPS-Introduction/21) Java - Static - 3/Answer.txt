@@ -1,0 +1,60 @@
+1.)
+class Student {
+    int rollno;
+    String name;
+    static String college = "CQ";
+    static void chage() {
+        college = "CodeQuotient";
+    }
+    Student(int r, String n) {
+        rollno = r;
+        name = n;
+    }
+    void display() {
+        System.out.println(rollno + " " + name + " " + college);
+    }
+    public static void main(String arts[]) {
+        Student.chage();
+        Student s1 = new Student(11, "Arun");
+        Student s2 = new Student(12, "Girdhar");
+        Student s3 = new Student(13, "Amit");
+        s1.display();
+        s3.display();
+        s2.display();
+    }
+}
+
+Answer:-
+11 Arun CodeQuotient
+13 Amit CodeQuotient
+12 Girdhar CodeQuotient
+
+2.)
+class Student {
+    int rollno;
+    String name;
+    static String college = "CQ";
+    static void chage() {
+        college = "CodeQuotient";
+    }
+    Student(int r, String n) {
+        rollno = r;
+        name = n;
+    }
+    void display() {
+        System.out.println(rollno + " " + name + " " + college);
+    }
+    public static void main(String arts[]) {
+        Student s1 = new Student(11, "Arun");
+        Student s2 = new Student(12, "Girdhar");
+        Student s3 = new Student(13, "Amit");
+        s1.display();
+        s2.display();
+        s3.display();
+    }
+}
+
+Answer:-
+11 Arun CQ
+12 Girdhar CQ
+13 Amit CQ

@@ -1,0 +1,40 @@
+1.)
+class CQ extends Thread 
+{
+  public void run()
+  {
+    System.out.println("CodeQuotient");
+  }
+}
+class Main
+{
+  public static void main(String[] args)
+  {
+    CQ t = new CQ();
+    t.start();
+  }
+}
+
+
+Answer:-
+2
+
+2.)
+class CQ extends Thread 
+{
+  public void run()
+  {
+    System.out.println("CodeQuotient");
+  }
+}
+class Main
+{
+  public static void main(String[] args)
+  {
+    CQ t = new CQ();
+    t.run();
+  }
+}
+
+Answer:-
+1

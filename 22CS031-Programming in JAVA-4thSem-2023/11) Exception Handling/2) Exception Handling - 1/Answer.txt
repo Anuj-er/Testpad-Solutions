@@ -1,0 +1,11 @@
+1.) Used to monitor for exceptions
+Answer:-
+try
+
+2.) Used to handle the exception thrown
+Answer:-
+catch
+
+3.) Used to manually throw an exception
+Answer:-
+throw

@@ -1,0 +1,73 @@
+1.)
+class CQ
+{
+    public int x;
+    private int y;
+    void cal(int a, int b)
+    {
+        x =  a + 1;
+        y =  b;
+    }        
+}    
+
+class Main
+{
+    public static void main(String args[])
+    {
+        CQ obj = new CQ();
+        obj.cal(2, 3);
+        System.out.println(obj.x + " " + obj.y);     
+    }
+}
+
+Answer:-
+Error
+
+2.)
+class CQ
+{
+    public int x;
+    int y;
+    void cal(int a, int b)
+    {
+        x =  a + 1;
+        y =  b;
+    }        
+}    
+
+class Main
+{
+    public static void main(String args[])
+    {
+        CQ obj = new CQ();
+        obj.cal(2, 3);
+        System.out.println(obj.x + " " + obj.y);     
+    }
+}
+
+Answer:-
+3 3
+
+3.)
+class CQ
+{
+    public int x, y;
+    void cal(int a, int b)
+    {
+        x =  a + 1;
+        y =  b;
+    }        
+}    
+
+class Main
+{
+    public static void main(String args[])
+    {
+        CQ obj = new CQ();
+        obj.cal(2, 3);
+        System.out.println(obj.x + " " + obj.y);     
+    }
+}
+
+Answer:-
+3 3

@@ -1,0 +1,23 @@
+1.) str1.length()
+Answer:-
+13
+
+2.) str1.charAt(9)
+Answer:-
+i
+
+3.) str2.charAt(1)
+Answer:-
+e
+
+4.) str1.indexOf("o")
+Answer:-
+1
+
+5.) str2.toUpperCase()
+Answer:-
+GET BETTER AT CODING
+
+6.) str2.substring(2, 12)
+Answer:-
+t better a

@@ -1,0 +1,73 @@
+1.)
+class CQ extends Thread implements Runnable
+{
+    public void run()
+    {
+        System.out.println("Code Quotient");
+    }
+    public static void main(String[] args)
+    {
+        CQ cq1 = new CQ();
+        cq1.run();
+        cq1.start();
+    }
+}
+
+Answer:-
+Code Quotient
+Code Quotient
+
+2.)
+class CQ implements Runnable
+{
+    public void run()
+    {
+        System.out.println("Code Quotient");
+    }
+    public static void main(String[] args)
+    {
+        CQ cq1 = new CQ();
+        cq1.run();
+        cq1.start();
+    }
+}
+
+Answer:-
+Error
+
+3.)
+class CQ extends Thread implements Runnable
+{
+    public void run()
+    {
+        System.out.println("Code Quotient");
+    }
+    public static void main(String[] args)
+    {
+        CQ cq1 = new CQ();
+        cq1.start();
+        cq1.start();
+    }
+}
+
+Answer:-
+Error
+
+4.)
+class CQ implements Runnable
+{
+    public void run()
+    {
+        System.out.println("Code Quotient");
+    }
+    public static void main(String[] args)
+    {
+        CQ cq1 = new CQ();
+        cq1.run();
+        cq1.run();
+    }
+}
+
+Answer:-
+Code Quotient
+Code Quotient

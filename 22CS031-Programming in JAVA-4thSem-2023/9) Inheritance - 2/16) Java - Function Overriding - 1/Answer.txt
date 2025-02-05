@@ -1,0 +1,60 @@
+1.)
+class Derived 
+{
+    public void getDetails(String temp)
+    {
+        // Code
+    }
+}
+ 
+class Test extends Derived
+{
+    public int getDetails(String temp)
+    {
+        // Code
+    }
+}
+
+Answer:-
+No
+
+2.)
+class Derived 
+{
+    public void getDetails(String temp)
+    {
+        // Code
+    }
+}
+ 
+class Test extends Derived
+{
+    public void getDetails(String temp)
+    {
+        // Code
+    }
+}
+
+Answer:-
+Yes
+
+3.)
+class Derived 
+{
+    public void getDetails(String temp)
+    {
+        // Code
+    }
+}
+ 
+class Test extends Derived
+{
+    void getDetails(String temp)
+    {
+        // Code
+        return 0;
+    }
+}
+
+Answer:-
+No

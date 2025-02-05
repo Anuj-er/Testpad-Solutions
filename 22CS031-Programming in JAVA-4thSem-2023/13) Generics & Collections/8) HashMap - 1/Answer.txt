@@ -1,0 +1,14 @@
+1.) {two=deux, five=cinq, one=un, three=trois, four=quatre}
+Answer:-
+
+
+2.) {one=Code, two=Quotient, three=Get, four=Better, five=Coding}
+Answer:-
+
+
+3.) {one=code, two=quotient, three=get, four=better, five=coding}
+Answer:-
+
+
+4.) {One=code, Two=quotient, Three=get, Four=better, Five=coding}
+Answer:-

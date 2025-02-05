@@ -1,0 +1,15 @@
+1.) try block need not to be followed by catch block
+Answer:-
+Yes
+
+2.) try can be followed by both catch and finally block
+Answer:-
+Yes
+
+3.) try block can be followed by finally block instead of catch block
+Answer:-
+Yes
+
+4.) try need not to be followed by anything
+Answer:-
+No

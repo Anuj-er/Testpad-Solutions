@@ -1,0 +1,37 @@
+1.)
+class Main
+{
+    static int a = 40;
+    public static void main(String args[])
+    {
+        System.out.print(a + " ");
+        add();
+        System.out.print(a);
+    }
+    private static void add()
+    {
+        a = a + 40;
+    }
+}
+
+Answer:-
+40 80
+
+2.)
+class Main
+{
+    static int a = 40;
+    public static void main(String args[])
+    {
+        System.out.print(a + " ");
+        add();
+        System.out.print(a);
+    }
+    private void add()
+    {
+        a = a + 40;
+    }
+}
+
+Answer:-
+Error

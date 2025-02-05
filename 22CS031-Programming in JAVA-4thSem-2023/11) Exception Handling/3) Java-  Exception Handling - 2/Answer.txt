@@ -1,0 +1,62 @@
+1.)
+class Main
+{
+    public static void main(String args[]) 
+    {
+        try 
+       {
+            int a, b=0;
+            a = 5 / b;
+            System.out.print("Code");
+        }
+        catch(ArithmeticException e) 
+        {
+    	    System.out.print("Quotient");
+        }
+    }
+}
+
+Answer:-
+Quotient
+
+2.)
+class Main
+{
+    public static void main(String args[]) 
+    {
+        try 
+       {
+            int a, b=0;
+            a = 5 / b;
+        }
+        catch(ArithmeticException e) 
+        {
+            System.out.print("Code");
+    	    System.out.print("Quotient");
+        }
+    }
+}
+
+Answer:-
+CodeQuotient
+
+3.)
+class Main
+{
+    public static void main(String args[]) 
+    {
+        try 
+       {
+            int a, b=0;
+            a = 5 / b;
+        }
+        catch(ArithmeticException e) 
+        {
+    	    System.out.print("Quotient");
+        }
+            System.out.print("Code");
+    }
+}
+
+Answer:-
+QuotientCode

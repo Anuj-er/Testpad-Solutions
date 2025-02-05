@@ -1,0 +1,75 @@
+1.)
+class FinalMethod
+{
+    private final void cq1() 
+    {
+        System.out.println("Final Method cq1");
+    }
+}
+ 
+class Main extends FinalMethod 
+{
+    public final void cq1() 
+    {
+        System.out.println("Sub Class cq1");
+    }
+    public static void main(String[] args) 
+    {
+        Main ob1 = new Main();
+        ob1.cq1();
+    }
+}
+
+Answer:-
+Sub Class cq1
+
+
+2.)
+class FinalMethod
+{
+    final void cq1() 
+    {
+        System.out.println("Final Method cq1");
+    }
+}
+ 
+class Main extends FinalMethod 
+{
+    public final void cq1() 
+    {
+        System.out.println("Sub Class cq1");
+    }
+    public static void main(String[] args) 
+    {
+        Main ob1 = new Main();
+        ob1.cq1();
+    }
+}
+
+Answer:-
+Error
+
+3.)
+class FinalMethod
+{
+    final void cq1() 
+    {
+        System.out.println("Final Method cq1");
+    }
+}
+ 
+class Main extends FinalMethod 
+{
+    public final void cq2() 
+    {
+        System.out.println("Sub Class cq2");
+    }
+    public static void main(String[] args) 
+    {
+        Main ob1 = new Main();
+        ob1.cq2();
+    }
+}
+
+Answer:-
+Sub Class cq2

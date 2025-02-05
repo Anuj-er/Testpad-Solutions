@@ -1,0 +1,19 @@
+1.) Abstract classes can have constructors
+Answer:-
+T
+
+2.) A class can be made abstract without any abstract method
+Answer:-
+T
+
+3.) A class can inherit from multiple abstract classes.
+Answer:-
+F
+
+4.) If we derive an abstract class and do not implement all the abstract methods, then the derived class should also be marked as abstract using 'abstract' keyword
+Answer:-
+T
+
+5.) We need not to implement all the abstract methods of an abstract class in derived class, if we implement any one of them.
+Answer:-
+F

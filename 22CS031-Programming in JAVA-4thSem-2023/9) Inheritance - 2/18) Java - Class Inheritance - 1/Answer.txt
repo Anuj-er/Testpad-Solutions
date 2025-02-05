@@ -1,0 +1,25 @@
+1.) var1.method2();
+Answer:-
+Box 2
+
+
+2.) var2.method2();
+Answer:-
+Jar 2
+
+3.) var3.method2();
+Answer:-
+Cup 2
+Box 2
+
+4.) var4.method2();
+Answer:-
+Jar 2
+
+5.) var5.method2();
+Answer:-
+error
+
+6.) var6.method2();
+Answer:-
+Pill 2

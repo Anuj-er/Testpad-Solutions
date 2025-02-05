@@ -1,0 +1,15 @@
+1.)
+int[][] arr = {{1,2,3}, {4,5}, {1,5,9}};
+for(int[] i:arr)
+    System.out.print(i.length + " ");
+
+Answer:-
+3 2 3 
+
+2.)
+int[][] arr = {{1,2,3}, {4,5,7,8}, {1,5,9,2}};
+for(int[] i:arr)
+    System.out.print(i.length + " ");
+
+Answer:-
+3 4 4

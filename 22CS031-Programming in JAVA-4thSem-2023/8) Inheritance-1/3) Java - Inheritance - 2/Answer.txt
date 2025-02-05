@@ -1,0 +1,116 @@
+1.)
+class Grandparent 
+{
+    public void Print() 
+    {
+        System.out.println("Grandparent's Print()"); 
+    } 
+}
+ 
+class Parent extends Grandparent 
+{
+    public void Print() 
+    {
+        super.Print();
+        System.out.println("Parent's Print()"); 
+    } 
+}
+ 
+class Child extends Parent 
+{
+    public void Print()   
+    {
+        super.Print();
+        System.out.println("Child's Print()"); 
+    } 
+}
+ 
+class Main 
+{
+    public static void main(String[] args) 
+    {
+        Child c = new Child();
+        c.Print(); 
+    }
+}
+
+Answer:-
+Grandparent's Print()
+Parent's Print()
+Child's Print()
+
+2.)
+class Grandparent 
+{
+    public void Print() 
+    {
+        System.out.println("Grandparent's Print()"); 
+    } 
+}
+ 
+class Parent extends Grandparent 
+{
+    public void Print() 
+    {
+        System.out.println("Parent's Print()"); 
+    } 
+}
+ 
+class Child extends Parent 
+{
+    public void Print()   
+    {
+        super.Print();
+        System.out.println("Child's Print()"); 
+    } 
+}
+ 
+class Main 
+{
+    public static void main(String[] args) 
+    {
+        Child c = new Child();
+        c.Print(); 
+    }
+}
+
+Answer:-
+Parent's Print()
+Child's Print()
+
+3.)
+class Grandparent 
+{
+    public void Print() 
+    {
+        System.out.println("Grandparent's Print()"); 
+    } 
+}
+ 
+class Parent extends Grandparent 
+{
+    public void Print() 
+    {
+        System.out.println("Parent's Print()"); 
+    } 
+}
+ 
+class Child extends Parent 
+{
+    public void Print()   
+    {
+        System.out.println("Child's Print()"); 
+    } 
+}
+ 
+class Main 
+{
+    public static void main(String[] args) 
+    {
+        Child c = new Child();
+        c.Print(); 
+    }
+}
+
+Answer:-
+Child's Print()

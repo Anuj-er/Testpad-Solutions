@@ -1,0 +1,42 @@
+1.)
+int number = 4;
+for (int count = 1; count <= number; count++) 
+{
+   System.out.println(number);
+   number = number / 2;
+}
+
+Answer:-
+4
+2
+
+2.)
+int total = 14;
+for (int number = 1; number <= (total / 2); number++) 
+{
+   total = total - number;
+   System.out.println(total + " " + number);
+}
+
+Answer:-
+13 1
+11 2
+8 3
+4 4
+
+3.)
+System.out.println("+----+");
+for (int i = 1; i < 3; i++) 
+{
+    System.out.println("\\/");
+    System.out.println("/\\");
+}
+System.out.println("+----+");
+
+Answer:-
++----+
+\/
+/\
+\/
+/\
++----+

@@ -1,0 +1,11 @@
+1.) non-parameterized constructor must be defined first.
+Answer:-
+No
+
+2.) Constructors must be without return type
+Answer:-
+Yes
+
+3.) Constructors can not be public
+Answer:-
+No

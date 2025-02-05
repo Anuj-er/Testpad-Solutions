@@ -1,0 +1,19 @@
+1.) Comparing two arrays for equality.
+Answer:-
+Yes
+
+2.) Swapping the first and last values of an array.
+Answer:-
+No
+
+3.) Examining the value of the first element of the array.
+Answer:-
+No
+
+4.) Searching an array for a given value.
+Answer:-
+Yes
+
+5.) Printing an array's elements.
+Answer:-
+Yes

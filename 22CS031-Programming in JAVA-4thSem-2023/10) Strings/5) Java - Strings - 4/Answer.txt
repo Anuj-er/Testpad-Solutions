@@ -1,0 +1,15 @@
+1.) sentence(one, two, 3);
+Answer:-
+three times two = 6
+
+2.) sentence(two, three, 11);
+Answer:-
+1 times three = 22
+
+3.) sentence(three, three, number - 1);
+Answer:-
+1 times 1 = 38
+
+4.) sentence("eight", three, number * 2);
+Answer:-
+1 times eight = 80

@@ -1,0 +1,21 @@
+1.) str1.toLowerCase().indexOf("Q")
+Answer:-
+-1
+
+2.) str2.replace("at", "@")
+Answer:-
+Get better @ Coding
+
+
+3.) "str1".replace("r", "range")
+Answer:-
+strange1
+
+4.) str2.replace("better", "proficient")
+Answer:-
+Get proficient at Coding
+
+
+5.) str1.toLowerCase().indexOf("q")
+Answer:-
+5

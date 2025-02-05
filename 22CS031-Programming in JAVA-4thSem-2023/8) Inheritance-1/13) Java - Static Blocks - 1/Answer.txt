@@ -1,0 +1,39 @@
+1.)
+class Main {
+    static int a = 1;
+    static int b = 2;
+    static {
+        a += 1;
+        b += 1;
+    }
+    public static void main(String args[]) {
+        a += 1;
+        b += 2;
+        System.out.println(a + b);
+    }
+}
+
+Answer:-
+8
+
+2.)
+class Main {
+    static int a = 1;
+    static int b = 2;
+    static {
+        a += 1;
+        b += 1;
+    }
+    public static void main(String args[]) {
+        a += 1;
+        b += 2;
+        System.out.println(a + b);
+    }
+    static {
+        a += 2;
+        b += 2;
+    }
+}
+
+Answer:-
+12

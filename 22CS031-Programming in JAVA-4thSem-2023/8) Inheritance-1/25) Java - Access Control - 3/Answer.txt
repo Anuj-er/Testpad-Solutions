@@ -1,0 +1,15 @@
+1.) public members of class can be accessed by any code in the program
+Answer:-
+T
+
+2.) private members of class can be inherited by a sub class, and become protected members in sub class
+Answer:-
+F
+
+3.) private members of class can only be accessed by other members of the class
+Answer:-
+T
+
+4.) protected members of a class can be inherited by a sub class, and become private members of the sub class
+Answer:-
+T

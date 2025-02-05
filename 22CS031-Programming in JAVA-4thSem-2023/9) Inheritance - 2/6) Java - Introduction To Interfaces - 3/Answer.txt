@@ -1,0 +1,49 @@
+1.)
+interface A
+{
+   public void cq1();
+}
+interface B
+{
+   public void cq1();
+}
+class Main implements A,B
+{
+   public void cq1()
+   {
+        System.out.println("CQ");
+   }
+   public static void main(String args[])
+   {
+        Main o1 = new Main();
+        o1.cq1();
+    }
+}
+
+Answer:-
+CQ
+
+2.)
+interface A
+{
+   public void cq1();
+}
+interface B
+{
+   public int cq1();
+}
+class Main implements A,B
+{
+   public void cq1()
+   {
+        System.out.println("CQ");
+   }
+   public static void main(String args[])
+   {
+        Main o1 = new Main();
+        o1.cq1();
+    }
+}
+
+Answer:-
+Error

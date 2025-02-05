@@ -1,0 +1,23 @@
+1.) Car c = new Vehicle();
+Answer:-
+No
+
+2.) Sports s = new Sports();
+Answer:-
+Yes
+
+3.) Vehicle v = new Sports();
+Answer:-
+Yes
+
+4.) Sports s = new Car();
+Answer:-
+No
+
+5.) Car c = new Sports();
+Answer:-
+Yes
+
+6.) Vehicle v = new Car();
+Answer:-
+Yes

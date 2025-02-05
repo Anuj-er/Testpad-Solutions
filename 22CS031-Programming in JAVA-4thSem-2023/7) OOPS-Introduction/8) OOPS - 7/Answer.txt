@@ -1,0 +1,11 @@
+1.) Programs consist of multiple modules and in turn, each module has a set of functions of related types.
+Answer:-
+Modular
+
+2.) Program has flat physical structure consisting of only global data and sequential code.
+Answer:-
+Monolithic
+
+3.) Organized around objects rather than “actions” and data rather than logic.
+Answer:-
+Object-Oriented

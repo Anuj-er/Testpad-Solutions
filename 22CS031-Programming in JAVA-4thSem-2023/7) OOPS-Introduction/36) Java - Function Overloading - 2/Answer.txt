@@ -1,0 +1,83 @@
+1.)
+class Overloading
+{
+    int x, y;
+    void add(int a) 
+    {
+        x =  a + 1;
+    }
+    void add(int a, int b)
+    {
+        x =  a + 2;
+    }        
+}    
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        Overloading obj = new Overloading();   
+        int a = 0;
+        obj.add(6);
+        System.out.println(obj.x);     
+    }
+}
+
+Answer:-
+7
+
+2.)
+class Overloading
+{
+    int x, y;
+    void add(int a) 
+    {
+        x =  a + 1;
+    }
+    void add(int a, int b)
+    {
+        x =  a + 2;
+    }        
+}    
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        Overloading obj = new Overloading();   
+        int a = 0;
+        obj.add(6,6);
+        System.out.println(obj.x);     
+    }
+}
+
+Answer:-
+8
+
+3.)
+class Overloading
+{
+    int x, y;
+    void add(double a) 
+    {
+        x =  a + 1;
+    }
+    void add(int a, int b)
+    {
+        x =  a + 2;
+    }        
+}    
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        Overloading obj = new Overloading();   
+        int a = 0;
+        obj.add(3.5);
+        System.out.println(obj.x);     
+    }
+}
+
+Answer:-
+Error

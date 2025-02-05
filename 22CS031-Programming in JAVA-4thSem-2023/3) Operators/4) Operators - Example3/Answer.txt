@@ -1,0 +1,11 @@
+1.) What expression produces the last digit of the number (the 1s place)?
+Answer:-
+val1%10;
+
+2.) What expression produces the second-to-last digit of the number (the 10s place)?
+Answer:-
+val1/10%10;
+
+3.) What expression produces the third-to-last digit of the number (the 100s place)
+Answer:-
+val1/100%10;

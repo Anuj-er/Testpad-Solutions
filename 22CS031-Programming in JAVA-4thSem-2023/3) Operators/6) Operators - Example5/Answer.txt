@@ -1,0 +1,27 @@
+1.) a == 2
+Answer:-
+true
+
+2.) a + b > 0
+Answer:-
+false
+
+3.) a - c != 0
+Answer:-
+false
+
+4.) b * b >= c
+Answer:-
+true
+
+5.) b / b == 1
+Answer:-
+true
+
+6.) b == c
+Answer:-
+false
+
+7.) a + b >= b + c
+Answer:-
+true

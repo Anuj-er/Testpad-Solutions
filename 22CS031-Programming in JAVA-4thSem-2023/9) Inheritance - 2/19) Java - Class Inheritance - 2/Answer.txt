@@ -1,0 +1,23 @@
+1.) ((Jar) var2).method1();
+Answer:-
+Jar 1
+
+2.) ((Cup) var3).method1();
+Answer:-
+Cup 1
+
+3.) ((Cup) var4).method1();
+Answer:-
+error
+
+4.) ((Jar) var4).method2();
+Answer:-
+Jar 2
+
+5.) ((Box) var5).method2();
+Answer:-
+Box 2
+
+6.) ((Pill) var5).method3();
+Answer:-
+error

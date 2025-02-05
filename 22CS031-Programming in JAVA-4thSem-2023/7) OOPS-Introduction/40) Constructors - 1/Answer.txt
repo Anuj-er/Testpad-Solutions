@@ -1,0 +1,27 @@
+1.) A constructor is the code that is called when you use the create an object.
+Answer:-
+T
+
+2.) A constructor is declared without a return type.
+Answer:-
+T
+
+3.) Constructors are considered bad programming style and should be avoided.
+Answer:-
+F
+
+4.) A constructor wastes memory in the computer so it should be used sparingly.
+Answer:-
+F
+
+5.) A constructor is a special method that creates an object and initializes its state.
+Answer:-
+T
+
+6.) A constructor can be used instead of fields to represent the data inside a class.
+Answer:-
+F
+
+7.) A class can have many methods but only one constructor.
+Answer:-
+F

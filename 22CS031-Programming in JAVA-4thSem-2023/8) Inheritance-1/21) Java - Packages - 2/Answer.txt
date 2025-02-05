@@ -1,0 +1,15 @@
+1.) Packages avoid name clashes
+Answer:-
+Yes
+
+2.) We can have hidden classes that are used by the packages, but not visible outside.
+Answer:-
+Yes
+
+3.) We can have classes that can never be reused again.
+Answer:-
+No
+
+4.) Classes, even though they are visible outside their package, can have fields visible to packages only
+Answer:-
+Yes

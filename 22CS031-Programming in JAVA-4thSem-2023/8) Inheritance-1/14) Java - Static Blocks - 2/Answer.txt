@@ -1,0 +1,40 @@
+1.)
+class Main {
+
+    final static int orange;
+    static int banana;
+    static {
+        banana = orange * 2;
+    }
+    public static void main(String[] args) {
+        System.out.print(orange + " " + banana + " ");
+        banana = orange + banana;
+        System.out.print(banana);
+    }
+    static {
+        orange = 25;
+    }
+}
+
+Answer:-
+N
+
+2.)
+class Main {
+    static {
+        orange = 25;
+    }
+    final static int orange;
+    static int banana;
+    static {
+        banana = orange * 2;
+    }
+    public static void main(String[] args) {
+        System.out.print(orange + " " + banana + " ");
+        banana = orange + banana;
+        System.out.print(banana);
+    }
+}
+
+Answer:-
+Y

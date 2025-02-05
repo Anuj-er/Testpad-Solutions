@@ -1,0 +1,15 @@
+1.) Interfaces specifies what class must do but not how it does
+Answer:-
+T
+
+2.) Interfaces are specified public if they are to be accessed by any code in the program
+Answer:-
+T
+
+3.) All variables in interface are implicitly final and static
+Answer:-
+T
+
+4.) All variables are static and methods are public if interface is defined pubic
+Answer:-
+F

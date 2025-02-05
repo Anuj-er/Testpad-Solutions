@@ -1,0 +1,93 @@
+1.)
+interface calculate
+{
+    void cal(int a);
+}
+class display implements calculate
+{
+    int x;
+    public void cal(int a)
+    {
+        x = a * a;            
+    }
+}
+class interfaces
+{
+    public static void main(String args[])
+    {
+        display arr = new display();
+        arr.x = 0;      
+        arr.cal(3);
+        System.out.print(arr.x);
+    }
+}
+
+Answer:-
+9
+
+2.)
+interface calculate
+{
+    void cal(int a);
+}
+class display implements calculate
+{
+    int x;
+    public void cal(int a)
+    {
+        x = a * a;            
+    }
+}
+class display2 implements calculate
+{
+    int x;
+    public void cal(int a)
+    {
+        x = a + a;
+    }
+}
+class interfaces
+{
+    public static void main(String args[])
+    {
+        display o1 = new display();
+        display2 o2 = new display2();
+        o1.x = 0;      
+        o1.cal(3);
+        System.out.println(o1.x);
+        o2.x = 0;      
+        o2.cal(3);
+        System.out.println(o2.x);
+    }
+}
+
+Answer:-
+9
+6
+
+3.)
+interface calculate
+{
+    void cal(int a);
+}
+class display implements calculate
+{
+    int x;
+    public void cal(int x)
+    {
+        x = x * x;            
+    }
+}
+class interfaces
+{
+    public static void main(String args[])
+    {
+        display o1 = new display();
+        o1.x = 0;      
+        o1.cal(3);
+        System.out.println(o1.x);
+    }
+}
+
+Answer:-
+0

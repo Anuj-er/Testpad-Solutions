@@ -1,0 +1,19 @@
+1.) Used to manually throw an exception
+Answer:-
+throw
+
+2.) Handles the exception when no catch is used
+Answer:-
+default handler
+
+3.) Related to all the exceptions that cannot be caught
+Answer:-
+Error
+
+4.) Super class of all exceptional type classes
+Answer:-
+Throwable
+
+5.) Related to all the exceptions that can be caught by using catch
+Answer:-
+Exception

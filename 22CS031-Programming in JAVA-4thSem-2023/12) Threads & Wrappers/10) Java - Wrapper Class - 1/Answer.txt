@@ -1,0 +1,15 @@
+1.) float f = Float.parseFloat(34.56);
+Answer:-
+No
+
+2.) float f = Float.parseFloat("34.56");
+Answer:-
+Yes
+
+3.) Integer i = 100 ;
+Answer:-
+Yes
+
+4.) Integer obj = new Integer("A");
+Answer:-
+No

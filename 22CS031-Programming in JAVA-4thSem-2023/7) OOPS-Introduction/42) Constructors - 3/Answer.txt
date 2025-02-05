@@ -1,0 +1,15 @@
+1.) It refers to the object on which a method or constructor has been called (sometimes called the "implicit parameter").
+Answer:-
+True
+
+2.) It can be used to access or set an object's field values
+Answer:-
+True
+
+3.) It is used when one object wants to access data from a second object.
+Answer:-
+False
+
+4.) It is required when a class has more than one constructor.
+Answer:-
+False

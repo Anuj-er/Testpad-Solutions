@@ -1,0 +1,15 @@
+1.) If you want to modify the array.
+Answer:-
+No
+
+2.) To traverse the array.
+Answer:-
+Yes
+
+3.) To keep track of element index.
+Answer:-
+No
+
+4.) Traverse array in backward manner.
+Answer:-
+No

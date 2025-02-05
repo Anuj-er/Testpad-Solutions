@@ -1,0 +1,16 @@
+1.)
+String f = "Girdhar";
+String l = "Bansal";
+String m = "G.";
+System.out.println(l);
+System.out.println("My name is " + f);
+System.out.println(f + " " + l);
+System.out.println(l + ", " + f + " " + m);
+System.out.println(m + " is for Gopal");
+
+Answer:-
+Bansal
+My name is Girdhar
+Girdhar Bansal
+Bansal, Girdhar G.
+G. is for Gopal

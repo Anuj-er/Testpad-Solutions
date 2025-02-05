@@ -1,0 +1,15 @@
+1.) array[0] =
+Answer:-
+10
+
+2.) array[1] =
+Answer:-
+10
+
+3.) array[2] =
+Answer:-
+10
+
+4.) array[3] =
+Answer:-
+10

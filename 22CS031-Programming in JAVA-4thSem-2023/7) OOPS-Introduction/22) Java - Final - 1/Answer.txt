@@ -1,0 +1,50 @@
+1.)
+class Main {
+    private boolean myFlag1 = true;
+    private static final boolean myFlag2;
+    private static boolean myFlag3;
+
+    public static void main(String[] arguments) {
+        Main m = new Main();
+        System.out.println(m.myFlag1);
+        System.out.println(myFlag2);
+        System.out.println(myFlag3);
+    }
+}
+
+Answer:-
+N
+
+2.)
+class Main {
+    private boolean myFlag1 = true;
+    private static final boolean myFlag2=true;
+    private static boolean myFlag3;
+
+    public static void main(String[] arguments) {
+        Main m = new Main();
+        System.out.println(m.myFlag1);
+        System.out.println(myFlag2);
+        System.out.println(myFlag3);
+    }
+}
+
+Answer:-
+Y
+
+3.)
+class Main {
+    private boolean myFlag1 = true;
+    private static final boolean myFlag2=true;
+    private static boolean myFlag3;
+
+    public static void main(String[] arguments) {
+        Main m = new Main();
+        System.out.println(myFlag1);
+        System.out.println(myFlag2);
+        System.out.println(myFlag3);
+    }
+}
+
+Answer:-
+N

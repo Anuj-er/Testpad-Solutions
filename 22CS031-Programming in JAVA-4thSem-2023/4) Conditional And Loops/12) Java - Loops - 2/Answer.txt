@@ -1,0 +1,21 @@
+1.)
+for (int i = 1; i <= 3; i++)
+System.out.println("CodeQuotient");
+System.out.println("Get better at coding!");
+
+Answer:-
+CodeQuotient
+CodeQuotient
+CodeQuotient
+Get better at coding!
+
+2.)
+System.out.println("Start Coding");
+for (int i = 5; i >= 1; i--) 
+System.out.print(i + ",");
+System.out.println("\nComplete!");
+
+Answer:-
+Start Coding
+5,4,3,2,1,
+Complete!

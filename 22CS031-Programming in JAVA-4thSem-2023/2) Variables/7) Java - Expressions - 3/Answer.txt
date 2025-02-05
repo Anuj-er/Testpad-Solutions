@@ -1,0 +1,23 @@
+1.)
+class Main 
+{
+    public static void main(String[] args) 
+	{
+        System.out.println("Dear -Programmer-,");
+        System.out.println("\nI am a computer software, \nwhich understands only binary language");
+        System.out.println("So, kindly provide input in binary only.\n");
+        System.out.println("\nSincerely");
+        System.out.println("JVM");
+	}
+}
+
+Answer:-
+Dear -Programmer-,
+
+I am a computer software, 
+which understands only binary language
+So, kindly provide input in binary only.
+
+
+Sincerely
+JVM

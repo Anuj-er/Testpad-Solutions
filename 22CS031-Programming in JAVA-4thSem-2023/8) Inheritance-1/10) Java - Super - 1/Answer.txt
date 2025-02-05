@@ -1,0 +1,7 @@
+1.) super keyword and this keyword can not be used in a static method.
+Answer:-
+Y
+
+2.) static variables are shared by all objects and initialized when the class is first loaded.
+Answer:-
+Y

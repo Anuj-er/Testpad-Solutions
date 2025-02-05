@@ -1,0 +1,35 @@
+1.) arr[0][0] =
+Answer:-
+4
+
+2.) arr[0][1] =
+Answer:-
+5
+
+3.) arr[0][2] =
+Answer:-
+5
+
+4.) arr[1][0] =
+Answer:-
+5
+
+5.) arr[1][1] =
+Answer:-
+6
+
+6.) arr[1][2] =
+Answer:-
+6
+
+7.) arr[2][0] =
+Answer:-
+6
+
+8.) arr[2][1] =
+Answer:-
+7
+
+9.) arr[2][2] =
+Answer:-
+7

@@ -1,0 +1,86 @@
+1.)
+class CQ implements Runnable
+{
+  public void run()
+  {
+    System.out.print("Code ");
+    System.out.print("Quotient ");
+  }
+  public static void main(String[] args)
+  {
+    CQ cq1 = new CQ();
+    Thread thread = new Thread(cq1);
+    thread.start();
+    try
+    {
+      thread.join();
+    } 
+    catch (InterruptedException e) 
+    {
+      e.printStackTrace();
+    }
+    System.out.print("Get better at ");
+    System.out.println("Coding.");
+  }
+}
+
+Answer:-
+Code Quotient Get better at Coding.
+
+2.)
+class CQ implements Runnable
+{
+  public void run()
+  {
+    System.out.print("Code ");
+    System.out.print("Quotient ");
+  }
+  public static void main(String[] args)
+  {
+    CQ cq1 = new CQ();
+    Thread thread = new Thread(cq1);
+    thread.start();
+    System.out.print("Get better at ");
+    try
+    {
+      thread.join();
+    } 
+    catch (InterruptedException e) 
+    {
+      e.printStackTrace();
+    }
+    System.out.println("Coding.");
+  }
+}
+
+Answer:-
+Depends on JVM
+
+3.)
+class CQ implements Runnable
+{
+  public void run()
+  {
+    System.out.print("Code ");
+    System.out.print("Quotient ");
+  }
+  public static void main(String[] args)
+  {
+    CQ cq1 = new CQ();
+    Thread thread = new Thread(cq1);
+    System.out.print("Get better at ");
+    thread.start();
+    try
+    {
+      thread.join();
+    } 
+    catch (InterruptedException e) 
+    {
+      e.printStackTrace();
+    }
+    System.out.println("Coding.");
+  }
+}
+
+Answer:-
+Get better at Code Quotient Coding.

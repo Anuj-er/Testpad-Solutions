@@ -1,0 +1,15 @@
+1.) cqifelse1(4, 10);
+Answer:-
+6 9
+
+2.) cqifelse1(7, 15);
+Answer:-
+9 14
+
+3.) cqifelse1(4, 25);
+Answer:-
+6 24
+
+4.) cqifelse1(6, 17);
+Answer:-
+8 16

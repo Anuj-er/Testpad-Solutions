@@ -1,0 +1,17 @@
+1.)
+String[] words = {"It", "was", "in", "the", "well"};
+System.out.println(mystery(words));
+Answer:-
+in
+
+2.)
+String[] words = {"It", "was", "the", "well"};
+System.out.println(mystery(words));
+Answer:-
+It
+
+3.)
+String[] words = {"was", "well", "hi"};
+System.out.println(mystery(words));
+Answer:-
+hi

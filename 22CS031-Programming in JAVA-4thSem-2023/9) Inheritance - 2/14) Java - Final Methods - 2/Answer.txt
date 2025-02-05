@@ -1,0 +1,19 @@
+1.) When a class is made final, a sublcass of it can not be created.
+Answer:-
+T
+
+2.) When a method is final, it can not be overridden.
+Answer:-
+T
+
+3.) When a method is final, it can be overridden.
+Answer:-
+F
+
+4.) When a variable is final, it can be assigned value only once.
+Answer:-
+T
+
+5.) When a variable is final, it can be assigned value any time.
+Answer:-
+F

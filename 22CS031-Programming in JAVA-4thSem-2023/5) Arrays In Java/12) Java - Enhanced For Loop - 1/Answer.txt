@@ -1,0 +1,20 @@
+1.)
+for(int a : arr)
+ System.out.println(a);
+
+Answer:-
+No
+
+2.)
+for(int a : arr.length)
+ System.out.println(a);
+
+Answer:-
+Yes
+
+3.)
+for(int arr : arr)
+ System.out.println(arr);
+
+Answer:-
+Yes

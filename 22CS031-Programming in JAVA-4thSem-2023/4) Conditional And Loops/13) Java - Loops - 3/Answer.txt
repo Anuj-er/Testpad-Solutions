@@ -1,0 +1,38 @@
+1.)
+for (int i = 2; i < 5; i++) {
+    for (int j = 1; j <= 5; j++) {
+        System.out.print((i * j) + "-");
+    }
+    System.out.println();
+}
+
+Answer:-
+2-4-6-8-10-
+3-6-9-12-15-
+4-8-12-16-20-
+
+2.)
+for (int i = 2; i < 5; i++) {
+    for (int j = 1; j <= 5; j++) {
+        System.out.print((i / j) + "-");
+    }
+    System.out.println();
+}
+
+Answer:-
+2-1-0-0-0-
+3-1-1-0-0-
+4-2-1-1-0-
+
+3.)
+for (int i = 2; i < 5; i++) {
+    for (int j = 1; j <= 5; j++) {
+        System.out.print((i % j) + "-");
+    }
+    System.out.println();
+}
+
+Answer:-
+0-0-2-2-2-
+0-1-0-3-3-
+0-0-1-0-4-

@@ -1,0 +1,28 @@
+1.)
+System.out.println("name\tage\theight");
+System.out.println("Amit\t25\t59");
+System.out.println("Gopal\t32\t56");
+System.out.println("Arun\t35\t60");
+
+Answer:-
+name    age     height
+Amit    25      59
+Gopal   32      56
+Arun    35      60
+
+2.)
+System.out.println("Naveen is 61");
+System.out.println("The empty string is.");
+
+Answer:-
+Naveen is 61
+The empty string is.
+
+3.)
+System.out.println("a\tb\tc");
+System.out.println("C:\nin\the downward spiral");
+
+Answer:-
+a       b       c
+C:
+in      he downward spiral

@@ -1,0 +1,15 @@
+1.) Public fields provide abstraction because they let the client directly view an object's data.
+Answer:-
+No
+
+2.) Objects provide abstraction through the .provideAbstraction() method.
+Answer:-
+No
+
+3.) By giving us more powerful pieces of data that have sophisticated behavior without having to manage and manipulate the data directly.
+Answer:-
+Yes
+
+4.) Objects provide abstraction when they declare a lot of useful data inside them.
+Answer:-
+No

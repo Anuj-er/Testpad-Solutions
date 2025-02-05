@@ -1,0 +1,59 @@
+1.)
+abstract class demo
+{
+   public int a;
+   demo()
+   {
+       a = 10;
+   }
+   abstract public void set();
+   abstract final public void get();
+}
+
+Answer:-
+Error
+
+2.)
+abstract class demo
+{
+   public int a;
+   demo()
+   {
+       a = 10;
+   }
+   abstract public void set();
+   abstract public void get();
+}
+
+Answer:-
+Yes
+
+3.)
+abstract class demo
+{
+   public int a;
+   demo()
+   {
+       a = 10;
+   }
+   public void set();
+   final public void get();
+}
+
+Answer:-
+Error
+
+4.)
+abstract class demo
+{
+   public int a;
+   demo()
+   {
+       a = 10;
+   }
+   public void set(){}
+   final public void get(){}
+}
+
+Answer:-
+Yes

@@ -1,0 +1,53 @@
+1.)
+class Main
+{
+  public static void main(String[] args)
+  {
+    int x = 3, y = 4;
+    switch(x + 3)
+    {
+       case 6: y = 0;
+       case 7: y = 1;
+       default: y += 1;
+      }
+   System.out.println(y);
+   }
+}
+
+Answer:-
+2
+
+2.)
+char ch = 'a';  
+switch (ch)
+{
+    case 'a':
+    case 'A': System.out.print(ch); break;
+    case 'b':
+    case 'B': System.out.print(ch); break;
+    case 'c':
+    case 'C': System.out.print(ch); break;
+}
+
+Answer:-
+a
+
+3.)
+class Test
+{
+  public static void main(String args[])
+  { 
+    int i, j=1;
+    i = (j>1)?2:1;
+    switch(i)
+    {
+     case 0: System.out.print(0); break;
+     case 1: System.out.print(1);
+     case 2: System.out.print(2); break;
+     case 3: System.out.print(3); break;
+    }
+  }
+}
+
+Answer:-
+12

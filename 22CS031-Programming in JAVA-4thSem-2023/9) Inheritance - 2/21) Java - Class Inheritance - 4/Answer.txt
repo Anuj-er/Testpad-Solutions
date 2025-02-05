@@ -1,0 +1,51 @@
+1.)
+class A
+{
+    public String cq1() 
+    {
+        return "Code";
+    }
+}
+
+public class B extends A
+{
+    public String cq1() 
+    {
+        return "Quotient";
+    }
+    public static void main(String[] args) 
+    {
+        A a = new B();
+        B b = new B();
+        System.out.println(a.cq1() + " " + b.cq1());
+    }
+}
+
+Answer:-
+Quotient Quotient
+
+2.)
+class A
+{
+    public static String cq1() 
+    {
+        return "Code";
+    }
+}
+
+public class B extends A
+{
+    public static String cq1() 
+    {
+        return "Quotient";
+    }
+    public static void main(String[] args) 
+    {
+        A a = new B();
+        B b = new B();
+        System.out.println(a.cq1() + " " + b.cq1());
+    }
+}
+
+Answer:-
+Code Quotient

@@ -1,0 +1,23 @@
+1.)
+arr[1] = 4;
+arr[4] = 9;
+arr[7] = 2;
+​
+int x = arr[1];
+arr[x] = 44;
+arr[arr[7]] = 11;
+
+Answer:-
+0 4 11 0 44 0 0 2 
+
+2.)
+arr[0] = 13;
+arr[3] = 2;
+arr[6] = 21;
+
+int x = arr[3];
+arr[x] = 27;
+arr[arr[3]] = 1;
+
+Answer:-
+13 0 1 2 0 0 21 0 

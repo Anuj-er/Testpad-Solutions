@@ -1,0 +1,47 @@
+1.)
+class Main 
+{
+    public static void main(String arg[]) 
+    {
+        int a = 134;
+        int b = 22;
+        System.out.println(a);
+        codequotient1(b);
+        System.out.println(a);
+        System.out.println(b);
+    }
+
+    static void codequotient1(int a)
+    {
+        System.out.println(a);
+        a = 16;
+    }
+}
+
+Answer:-
+134
+22
+134
+22
+
+2.)
+class Main 
+{
+    public static void main(String arg[]) 
+    {
+        String x = "code";
+        String y = "quotient";
+        String z = "coding";
+
+        codequotient(x, y, z);
+        codequotient(z, x, y);
+    }
+
+    static void codequotient(String y, String z, String x) {
+        System.out.println(z + " and " + x + " like " + y);
+    }
+}
+
+Answer:-
+quotient and coding like code
+code and quotient like coding
