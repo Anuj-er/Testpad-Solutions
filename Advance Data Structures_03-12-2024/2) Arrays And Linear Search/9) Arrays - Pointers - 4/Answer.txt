@@ -1,0 +1,15 @@
+1.) p1-p2
+Answer:-
+2
+
+2.) p1+p2
+Answer:-
+ERROR
+
+3.) p2-p1
+Answer:-
+-2
+
+4.) *p2++
+Answer:-
+0

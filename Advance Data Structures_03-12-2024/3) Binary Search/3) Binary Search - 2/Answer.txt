@@ -1,0 +1,7 @@
+1.) First Call
+Answer:-
+9
+
+2.) Second Call
+Answer:-
+29
