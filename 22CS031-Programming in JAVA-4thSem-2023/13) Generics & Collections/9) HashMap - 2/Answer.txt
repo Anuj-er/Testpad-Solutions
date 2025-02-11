@@ -3,6 +3,7 @@ map1 is {bar=1, baz=2, foo=3, mumble=4}
 map2 is {1=earth, 2=wind, 3=air, 4=fire}
 
 Answer:-
+{bar=earth, baz=wind, foo=air, mumble=fire}
 
 
 2.)
@@ -10,6 +11,7 @@ map1 is {Code=1, Amit=3, Better=4, Coding=5}
 map2 is {1=Quotient, 2=Kumar, 3=Ghai, 4=Coding}
 
 Answer:-
+{Better=Coding, Amit=Ghai, Code=Quotient}
 
 
 3.)
@@ -17,6 +19,7 @@ map1 is {Code=1, Girdhar=2, Better=3, Coding=5}
 map2 is {1=Quotient, 2=Gopal, 4=Bansal, 3=Coding}
 
 Answer:-
+{Better=Coding, Girdhar=Gopal, Code=Quotient}
 
 
 4.)
@@ -24,3 +27,4 @@ map1 is {a=42, b=9, c=7, d=15, e=11, f=24, g=7},
 map2 is {1=four, 3=score, 5=and, 7=seven, 9=years, 11=ago}
 
 Answer:-
+{b=years, c=seven, e=ago, g=seven}
