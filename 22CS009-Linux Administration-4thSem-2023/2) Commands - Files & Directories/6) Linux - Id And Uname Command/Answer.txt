@@ -1,0 +1,23 @@
+1.) uname -s
+Answer:-
+Linux
+
+2.) uname -r
+Answer:-
+5.4.0-70-generic
+
+3.) uname -p
+Answer:-
+x86_64
+
+4.) uname -o
+Answer:-
+GNU/Linux
+
+5.) id -u
+Answer:-
+0
+
+6.) id -g
+Answer:-
+0

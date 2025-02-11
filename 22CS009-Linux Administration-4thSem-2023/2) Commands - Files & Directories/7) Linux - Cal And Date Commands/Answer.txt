@@ -1,0 +1,23 @@
+1.) Write the command to print the calendar of the year 2022.
+Answer:-
+cal 2022
+
+2.) Write the command to print the calendar of the month of September of year 2016. (Write the month in format of "mm" e.g. January would be written as 01 instead of 1)
+Answer:-
+cal 09 2016
+
+3.) Display the previous, current and next month surrounding today.
+Answer:-
+cal -3
+
+4.) Write the command to print the current year in the format "yyyy". (Hint: Use format specifier)
+Answer:-
+date +%Y
+
+5.) Write the command to print the current day of the week. (1 is Monday , 2 is Tuesday ....)
+Answer:-
+date +%u
+
+6.) Write the command to print the total seconds passed till 1st January 1970
+Answer:-
+date +%s

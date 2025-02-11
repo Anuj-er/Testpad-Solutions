@@ -1,0 +1,11 @@
+1.) Write the command to display the help of cd command.
+Answer:-
+help cd
+
+2.) Write a command to print the time from which the system is running.
+Answer:-
+uptime
+
+3.) Which command is used to print the file name of the terminal connected to standard input.
+Answer:-
+tty

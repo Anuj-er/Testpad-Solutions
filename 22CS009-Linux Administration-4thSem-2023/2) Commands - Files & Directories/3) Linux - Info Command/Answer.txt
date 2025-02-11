@@ -1,0 +1,11 @@
+1.) ls
+Answer:-
+ info ls
+
+2.) cat
+Answer:-
+info cat
+
+3.) man
+Answer:-
+info man

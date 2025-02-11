@@ -1,0 +1,1 @@
+cp students.txt studentNames.txt && cat newStudents.txt >> students.txt && mv students.txt names.txt
