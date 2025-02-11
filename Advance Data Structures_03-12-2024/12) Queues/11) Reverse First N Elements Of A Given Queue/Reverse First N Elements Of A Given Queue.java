@@ -1,14 +1,4 @@
-/* 
-class QueueArray
-{
-  int SIZE=50;
-  int front=-1;
-  int rear=-1;
-  int array[]=new int[SIZE];
-  void enqueue(int item);
-  void dequeue();
-  Abobe is the queue declaration.
-*/
+
 static void reverseKelementsQueue(QueueArray q, int K) {
     if (q.front == -1 || q.front > q.rear || K <= 0) return; // Edge case check
     Stack<Integer> stack = new Stack<>();
