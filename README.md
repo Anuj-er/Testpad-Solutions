@@ -53,9 +53,12 @@ Currently featuring solutions for:
 
 | Course Code | Course Name | Semester | Year |
 |------------|-------------|-----------|------|
-| 22CS006 | Object Oriented Programming in C++ | 3rd | 2023 |
-| 22CS007 | Database Management System | 3rd | 2023 |
-| 22CS014 | Front-End Engineering-II | 3rd | 2023 |
+| 22CS006 | Object Oriented Programming in C++ | 3rd | 2024 |
+| 22CS007 | Database Management System | 3rd | 2024 |
+| 22CS014 | Front-End Engineering-II | 3rd | 2024 |
+| 23CS005 | Programming in JAVA | 4th | 2024-25 |
+| 22CS014 | Data Structures | 4th | 2024-25 |
+| 22CS009 | Linux Administration | 4th | 2024-25 |
 
 ## 🗂 Repository Structure
 ```mermaid
@@ -64,10 +67,13 @@ graph TD
     B --> C[22CS006 - OOP]
     B --> D[22CS007 - DBMS]
     B --> E[22CS014 - FEE]
-    C --> F[Assignments]
-    C --> G[Code Files]
-    C --> H[Screenshots]
-    C --> I[Documentation]
+    B --> F[23CS005 - JAVA]
+    B --> G[23CS004 - DS]
+    B --> H[22CS009 - LA]
+    C --> I[Assignments]
+    C --> J[Code Files]
+    C --> K[Screenshots]
+    C --> L[Documentation]
 ```
 
 ### 📁 Organization
@@ -95,17 +101,17 @@ graph TD
 We welcome contributions! Here's how you can help:
 
 1. **Fork the Repository**
-2. **Create a Feature Branch**
+2. **Create a Answers Branch**
    ```bash
-   git checkout -b feature/AmazingFeature
+   git checkout -b answers/FixOrAddAnswers
    ```
 3. **Commit Changes**
    ```bash
-   git commit -m 'Add some AmazingFeature'
+    git commit -m 'Fix incorrect answer / Add missing answer'  
    ```
 4. **Push to Branch**
    ```bash
-   git push origin feature/AmazingFeature
+   git push origin answers/FixOrAddAnswers
    ```
 5. **Open a Pull Request**
 
@@ -124,10 +130,26 @@ university-course-solutions/
 │   ├── Nested-Queries/
 │   └── Practice-Sets/
 │
-└── 22CS014-Front-End-Engineering/
-    ├── React-Components/
-    ├── JavaScript-Basics/
-    └── Project-Work/
+│── 22CS014-Front-End-Engineering/
+│   ├── React-Components/
+│   ├── JavaScript-Basics/
+│   └── Project-Work/
+│
+│── 23CS005-Programming-in-JAVA/
+│   ├── Introduction/
+│   ├── Variables/
+│   └── Operators/
+│
+│── 22CS014-Data-Structures/
+│   ├── Recursion -1/
+│   ├── Arrays and Linear Search/
+│   └── Binary Search/
+│
+└── 22CS009-Linux-Administration/
+    ├── Introduction/
+    ├── Variables/
+    └── Operators/
+
 ```
 
 ## 💡 Best Practices
