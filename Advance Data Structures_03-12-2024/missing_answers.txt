@@ -2,41 +2,7 @@
 ✅ All 'Answer.txt' files have answers!
 
 🛑 Empty .java Files 🛑
-1. 12) Queues/11) Reverse First N Elements Of A Given Queue/Reverse First N Elements Of A Given Queue.java
-2. 12) Queues/10) Reverse A Given Queue/Reverse A Given Queue.java
-3. 12) Queues/9) Implement The Queue Using Array/Implement The Queue Using Array.java
-4. 7) String - Practice/7) Spell The Number/Spell The Number.java
-5. 14) Binary Search Tree/4) Find The Lowest Common Ancestor Of Given Two Nodes In A Binary Search Tree/Find The Lowest Common Ancestor Of Given Two Nodes In A Binary Search Tree.java
-6. 14) Binary Search Tree/3) Convert Level Order Traversal To BST/Convert Level Order Traversal To BST.java
-7. 14) Binary Search Tree/2) Find The Kth Smallest Element In The Binary Search Tree/Find The Kth Smallest Element In The Binary Search Tree.java
-8. 14) Binary Search Tree/5) Find The Floor And Ceil Of A Key In Binary Search Tree/Find The Floor And Ceil Of A Key In Binary Search Tree.java
-9. 14) Binary Search Tree/1) Given Binary Tree Is Binary Search Tree Or Not/Given Binary Tree Is Binary Search Tree Or Not.java
-10. 11) Stack/5) Find The Next Greater Element On Right Side/Find The Next Greater Element On Right Side.java
-11. 11) Stack/4) Design Stack For Push, Pop, And Min Functions/Design Stack For Push, Pop, And Min Functions.java
-12. 11) Stack/7) Evaluate The Postfix Expression Using Stack/Evaluate The Postfix Expression Using Stack.java
-13. 11) Stack/8) Evaluate The Prefix Expression Using Stack/Evaluate The Prefix Expression Using Stack.java
-14. 11) Stack/1) Implement The Stack Using Array/Implement The Stack Using Array.java
-15. 11) Stack/6) Find The Minimum Bracket Reversals For Balanced Expression/Find The Minimum Bracket Reversals For Balanced Expression.java
-16. 10) Circular Linked List/7) Insert In A Sorted Circular Linked List/Insert In A Sorted Circular Linked List.java
-17. 10) Circular Linked List/8) Split The Circular Linked List In Two Parts/Split The Circular Linked List In Two Parts.java
-18. 10) Circular Linked List/4) Insert Nodes In A Circular Linked List/Insert Nodes In A Circular Linked List.java
-19. 10) Circular Linked List/3) Given List Is Circular Or Not/Given List Is Circular Or Not.java
-20. 10) Circular Linked List/5) Delete In Circular Linked List/Delete In Circular Linked List.java
-21. 13) Binary Tree/1) Create A Binary Tree From Array/Create A Binary Tree From Array.java
-22. 13) Binary Tree/3) Print Nodes At Odd Levels Of The Binary Tree/Print Nodes At Odd Levels Of The Binary Tree.java
-23. 13) Binary Tree/13) Find Out If The Tree Can Be Folded Or Not/Find Out If The Tree Can Be Folded Or Not.java
-24. 13) Binary Tree/10) Convert A Binary Tree Into Its Mirror Tree/Convert A Binary Tree Into Its Mirror Tree.java
-25. 13) Binary Tree/15) Find Maximum Depth Or Height Of A Binary Tree/Find Maximum Depth Or Height Of A Binary Tree.java
-26. 13) Binary Tree/6) Construct Tree From Given Inorder And Postorder Traversal/Construct Tree From Given Inorder And Postorder Traversal.java
-27. 13) Binary Tree/11) Print Cousins Of A Given Node In Binary Tree/Print Cousins Of A Given Node In Binary Tree.java
-28. 13) Binary Tree/12) Print Nodes In A Top View Of Binary Tree/Print Nodes In A Top View Of Binary Tree.java
-29. 13) Binary Tree/4) Write Iterative Version Of Inorder Traversal/Write Iterative Version Of Inorder Traversal.java
-30. 13) Binary Tree/14) Given Two Trees Are Identical Or Not/Given Two Trees Are Identical Or Not.java
-31. 13) Binary Tree/8) Print All Paths To Leaves And Their Details Of A Binary Tree/Print All Paths To Leaves And Their Details Of A Binary Tree.java
-32. 13) Binary Tree/2) Print Binary Tree With Level Order Traversal/Print Binary Tree With Level Order Traversal.java
-33. 13) Binary Tree/16) Evaluation Of Expression Tree/Evaluation Of Expression Tree.java
-34. 13) Binary Tree/5) Complete The Inorder, Preorder, And Postorder Functions For Traversal With Recursion/Complete The Inorder, Preorder, And Postorder Functions For Traversal With Recursion.java
-35. 13) Binary Tree/7) Count The Number Of Leaf And Non-Leaf Nodes In A Binary Tree/Count The Number Of Leaf And Non-Leaf Nodes In A Binary Tree.java
-36. 13) Binary Tree/9) Find The Right Node Of A Given Node/Find The Right Node Of A Given Node.java
+1. 14) Binary Search Tree/2) Find The Kth Smallest Element In The Binary Search Tree/Find The Kth Smallest Element In The Binary Search Tree.java
+2. 11) Stack/4) Design Stack For Push, Pop, And Min Functions/Design Stack For Push, Pop, And Min Functions.java
 
-Total Empty .java Files: 36
+Total Empty .java Files: 2
