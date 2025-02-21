@@ -1,14 +1,19 @@
-static void reverseQueue(QueueArray q) {
-    if (q.front == -1 || q.front > q.rear) return; 
-    int size = q.rear - q.front + 1; 
-    int[] temp = new int[size];  
-    int index = 0;
-    while (q.front <= q.rear) {  
-        temp[index++] = q.dequeue();
+// Method to add an item to the queue.
+    void enqueue(int item) {
+        if (rear == SIZE - 1) {
+            return; // Queue overflow
+        }
+        if (front == -1) {
+            front = 0;
+        }
+        array[++rear] = item;
     }
-    q.front = -1;
-    q.rear = -1;
-    for (int i = size - 1; i >= 0; i--) {
-        q.enqueue(temp[i]);
+
+    // Method to remove an item from queue.
+    int dequeue() {
+        if (front == -1 || front > rear) {
+            return -1; // Queue underflow
+        }
+        return array[front++];
     }
 }
