@@ -7,7 +7,5 @@
 3. 9) Inheritance - 2/23) Class - Writer and Book - 2/Answer.java
 4. 14) Files & Streams/11) Parse And Remove Comments From A Program/Answer.java
 5. 14) Files & Streams/12) Print Duplicate Words From A File/Answer.java
-6. 14) Files & Streams/16) Strip HTML Tags From A File/Answer.java
-7. 14) Files & Streams/13) Print Histogram Of A Data File/Answer.java
 
-Total Empty .java Files: 7
+Total Empty .java Files: 5
