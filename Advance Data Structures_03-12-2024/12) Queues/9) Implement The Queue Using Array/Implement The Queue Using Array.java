@@ -1,14 +1,25 @@
-static void reverseQueue(QueueArray q) {
-    if (q.front == -1 || q.front > q.rear) return; 
-    int size = q.rear - q.front + 1; 
-    int[] temp = new int[size];  
-    int index = 0;
-    while (q.front <= q.rear) {  
-        temp[index++] = q.dequeue();
+import java.util.*;
+class QueueArray {
+  static int SIZE = 100;
+  static int front = -1;
+  static int rear = -1;
+  static int array[] = new int[SIZE];
+  QueueArray() {
+    front = rear = -1;
+  }
+  void enqueue(int item) {
+    if (rear == SIZE - 1) {
+      return; 
     }
-    q.front = -1;
-    q.rear = -1;
-    for (int i = size - 1; i >= 0; i--) {
-        q.enqueue(temp[i]);
+    if (front == -1) {
+      front = 0;
     }
+    array[++rear] = item;
+  }
+  int dequeue() {
+    if (front == -1 || front > rear) {
+      return -1; 
+    }
+    return array[front++];
+  }
 }
