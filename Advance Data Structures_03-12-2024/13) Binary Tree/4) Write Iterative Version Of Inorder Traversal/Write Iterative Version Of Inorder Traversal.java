@@ -1,17 +1,17 @@
-void printInorder(struct Node* root) {
-    if (root == NULL) {
-        return;
-    }
-    struct Node* current = root;
-    struct Node* stack[100000]; 
-    int top = -1; 
-    while (current != NULL || top >= 0) {
-        while (current != NULL) {
-            stack[++top] = current;  
-            current = current->left; 
+static void printInorder(Node root) {
+        if (root == null) {
+            return;
         }
-        current = stack[top--]; 
-        printf("%d ", current->data);
-        current = current->right;
+        Node current = root;
+        Node[] stack = new Node[100000];
+        int top = -1;
+        while (current != null || top >= 0) {
+            while (current != null) {
+                stack[++top] = current;
+                current = current.leftChild;
+            }
+            current = stack[top--];
+            System.out.print(current.data + " ");
+            current = current.rightChild;
+        }
     }
-}
