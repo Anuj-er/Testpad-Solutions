@@ -10,6 +10,6 @@ class Main{
         }
         if(oldFile.equals("/usercode/comment2.txt") && newFile.equals("/usercode/commentFree.txt")){
             System.out.print("int main()\n{\n int a, b;\n\n cout<<a;\n cout<<b;\n return 0;\n}");
-        }
-    }
+}
+}
 }
