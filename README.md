@@ -1,6 +1,6 @@
 <div align="center">
   
-# 🎓 University Course Solutions - TestPad
+# 🎓 Chitkara University Course Solutions - TestPad
 
 ![Stars](https://img.shields.io/github/stars/anuj-er/Testpad-Solutions?style=for-the-badge)
 ![Forks](https://img.shields.io/github/forks/anuj-er/Testpad-Solutions?style=for-the-badge)
